@@ -1,0 +1,22 @@
+{
+	"type" : "sbq/fockoff/notjean-hub",
+
+	// this should be your base NPC's type
+	"baseType" : "sbq/fockoff/notjean",
+
+	"scriptConfig" : {
+		"questGenerator" : {
+			"pools" : ["sbq_common", "sbq_transform", "sbq_vore"]
+		},
+		"sbqHubNPCs" : [ // list of NPCs that can spawn in the SBQ hub world
+			{"level": 1, "species": "sbq/fockoff/notjean", "type": "bq/fockoff/notjean-hub", "overrides": {}}
+		]
+	},
+	"statusControllerSettings" : {
+		"stats" : {
+			"protection" : {
+				"baseValue" : 100.0
+			}
+		}
+	}
+}
