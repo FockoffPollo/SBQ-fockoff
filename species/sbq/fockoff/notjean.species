@@ -10,7 +10,6 @@
 	// this is just to make sure if you make them show up in the character creator they default to their proper name
 	"nameGen" : [ "/species/sbq/fockoff/notjean.species:nameGenConfig", "/species/sbq/fockoff/notjean.species:nameGenConfig" ],
 	"nameGenConfig": ["Not Jean"],
-	"forceName" : "notjean", // this makes it so when using SBQ's TF system, players are forced to use their name when tfed as them
 	"potionRarity" : "essential", // OCs typically have essential rarity for the potions
 
 	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
@@ -20,6 +19,23 @@
 	"skull" : "/humanoid/human/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF",
 	"altOptionAsUndyColor" : true,
+	"humanoidOverrides" : {
+		"useAnimation" : true,
+		"animation" : {
+			"version" : 1,
+			"globalTagDefaults" : {},
+			"includes" : {
+				"/humanoid/opensb/humanoid.animation",
+				"/humanoid/sbq/layered_emote.animation",
+				"tail.animation",
+				"wings.animation"
+			},
+			"animatedParts" : {
+				"stateTypes" : {},
+				"parts" : {}
+			},
+			"transformationGroups" : {}
+		}
 	"headOptionAsHairColor" : true,
 	"altOptionAsHairColor" : true,
 	"genders" : [
@@ -384,7 +400,7 @@
 		},
 
 		// "sbq/belly.png": { // you have your own custom one already
-		// 	"sourceImage": "/humanoid/any/sbqModules/belly/default.png",
+		// 	"sourceImage": "/humanoid/sbq/fockoff/notjean/sbq/belly.png",
 		// 	"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
 		// 	"remapDirectives": [
 		// 		[
@@ -424,7 +440,7 @@
 			// ]
 		},
 		// "sbq/cock.png": {
-		// 	"sourceImage": "/humanoid/any/sbqModules/cock/default.png",
+		// 	"sourceImage": "/humanoid/sbq/fockoff/notjean/sbq/cock.png",
 		// 	"remapDirectives": [
 		// 		[
 		// 			"primary",
@@ -442,7 +458,7 @@
 			// ]
 		},
 		"sbq/ballsFront.png": {
-			"sourceImage": "/humanoid/any/sbqModules/balls/default/front.png",
+		// 	"sourceImage": "/humanoid/sbq/fockoff/notjean/sbq/ballsFront.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -469,7 +485,7 @@
 			]
 		},
 		"sbq/infused/ballsBack.png": {
-			"sourceImage": "/humanoid/any/sbqModules/balls/default/back.png",
+		// 	"sourceImage": "/humanoid/sbq/fockoff/notjean/sbq/ballsBack.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -496,7 +512,7 @@
 			]
 		},
 		"sbq/breastsFront.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+		// 	"sourceImage": "/humanoid/sbw/fockoff/notjean/sbq/breastsFront.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -514,7 +530,7 @@
 			]
 		},
 		"sbq/breastsBack.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+		// 	"sourceImage": "/humanoid/sbw/fockoff/notjean/sbq/breastsBack.png",
 			"remapDirectives": [
 				[
 					"primary",

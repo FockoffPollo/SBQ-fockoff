@@ -11,13 +11,13 @@
 		"default" : "walk.1",
 
 		"idle.1" : "walk.1",
-		"idle.2" : "walk.2",
-		"idle.3" : "walk.3",
-		"idle.4" : "walk.4",
-		"idle.5" : "walk.5",
-		"idle.6" : "walk.6",
-		"idle.7" : "walk.7",
-		"idle.8" : "walk.8",
+		"idle.2" : "walk.1",
+		"idle.3" : "walk.1",
+		"idle.4" : "walk.1",
+		"idle.5" : "walk.1",
+		"idle.6" : "walk.1",
+		"idle.7" : "walk.1",
+		"idle.8" : "walk.1",
 
 		"sit.1" : "idle.1",
 

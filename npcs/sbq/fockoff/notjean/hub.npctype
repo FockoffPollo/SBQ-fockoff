@@ -9,7 +9,7 @@
 			"pools" : ["sbq_common", "sbq_transform", "sbq_vore"]
 		},
 		"sbqHubNPCs" : [ // list of NPCs that can spawn in the SBQ hub world
-			{"level": 1, "species": "sbq/fockoff/notjean", "type": "bq/fockoff/notjean-hub", "overrides": {}}
+			{"level": 1, "species": "sbq/fockoff/notjean", "type": "sbq/fockoff/notjean-hub", "overrides": {}}
 		]
 	},
 	"statusControllerSettings" : {
