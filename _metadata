@@ -1,0 +1,15 @@
+{
+	"version" : "0.0",
+	"tags" : "",
+	"author" : "fockoff",
+	"description" : "They're here for the Starbecue",
+	"link" : "https://github.com/FockoffPollo/SBQ-fockoff",
+	"name" : "SBQ-fockoff", // the name other mods check for
+	"friendlyName" : "SBQ-fockoff", // the string players would see
+	"includes" : [
+		"Starbecue"
+	],
+	"scripts" : {
+		"onLoad" : ["/scripts/fockoff/onload.lua"]
+	}
+}
