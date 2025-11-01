@@ -19,23 +19,6 @@
 	"skull" : "/humanoid/human/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF",
 	"altOptionAsUndyColor" : true,
-	"humanoidOverrides" : {
-		"useAnimation" : true,
-		"animation" : {
-			"version" : 1,
-			"globalTagDefaults" : {},
-			"includes" : {
-				"/humanoid/opensb/humanoid.animation",
-				"/humanoid/sbq/layered_emote.animation",
-				"tail.animation",
-				"wings.animation"
-			},
-			"animatedParts" : {
-				"stateTypes" : {},
-				"parts" : {}
-			},
-			"transformationGroups" : {}
-		}
 	"headOptionAsHairColor" : true,
 	"altOptionAsHairColor" : true,
 	"genders" : [
