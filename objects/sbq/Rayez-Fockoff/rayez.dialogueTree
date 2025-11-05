@@ -1,0 +1,400 @@
+{
+	"dialogueFile" : "/objects/sbq/Rayez-Fockoff/rayez.dialogue",
+	// after following a path, next steps will automatically advance down the tree building the result dialogue
+
+	// overall default values for a "new" dialogue
+	"defaultResults" : {
+		"fill" : {
+			"entityPortrait" : ["bust"],
+			"textSound": ["/sfx/interface/aichatter1.ogg"],
+			"textVolume" : [1],
+		},
+		"next" : ["personality"],
+		"shy" : {"fill" : {"useFile":"/npcs/sbq/dialogue/shy.dialogue"}},
+		"flirty" : {"fill" : {"useFile":"/npcs/sbq/dialogue/flirty.dialogue"}},
+		"meanbean" : {"fill" : {"useFile":"/npcs/sbq/dialogue/meanbean.dialogue"}}
+	},
+	// greeting is the default start of the tree
+	// settings come from itself
+	"greeting" : {
+		"new" : {"jump" : ".converse"},
+		"next" : "giveRewards",
+		"rewards" : {
+			"replace" : {"dialogueRandom" : [":greetingRewards"]},
+			"next" : ["introduced"],
+			"true" : {
+				"replace" : {"dialogueRandom" : [":greetingRewardsIntroduced"]}
+			}
+		},
+		"default" : {
+			"settings" : "target",
+			"next" : ["isOwner"],
+			"replace" : {"dialogueRandom" : [":greeting"]},
+			"true" : {
+				"next" : ["isFollowing"],
+				"replace" : {
+					"dialogueRandom" : [":greetingCrew"]
+				},
+				"true" : { "replace" : {
+					"buttonText" : [":stay"],
+					"jump" : ".stay"
+				}},
+				"false" : {"replace" : {
+					"buttonText": [":follow"],
+					"jump" : ".follow"
+				}}
+			},
+			"false" : {
+				"next" : ["introduced"],
+				"true" : {
+					"replace" : {"dialogueRandom" : [":greetingIntroduced"]}
+				}
+			}
+		}
+	},
+
+	"chatterEmpty" : {
+		"settings" : "self",
+		"new" : {"dismissTime" : 2, "jump" : false},
+		"next" : [
+			"chatterBelly",
+			"chatterBalls"
+		],
+		"chatterBelly" : {
+			"next" : ["locations.belly.mainEffect"],
+			"none" : {
+				"replace" : {"dialogueRandom":[":chatterBellyNoneEmpty"]}
+			},
+			"heal" : {
+				"replace" : {"dialogueRandom":[":chatterBellyHealEmpty"]}
+			},
+			"softDigest" : {
+				"replace" : {"dialogueRandom":[":chatterBellyDigestEmpty"]}
+			}
+		},
+		"chatterBalls" : {
+			"next" : ["locations.balls.mainEffect"],
+			"none" : {
+				"replace" : {"dialogueRandom":[":chatterBallsNoneEmpty"]}
+			},
+			"heal" : {
+				"replace" : {"dialogueRandom":[":chatterBallsHealEmpty"]}
+			},
+			"softDigest" : {
+				"replace" : {"dialogueRandom":[":chatterBallsDigestEmpty"]}
+			}
+		}
+	},
+
+	"chatterFull" : {
+		"settings" : "self",
+		"new" : {"dismissTime" : 2, "jump" : false},
+		"next" : [
+			"chatterBelly",
+			"chatterBalls"
+		],
+		"chatterBelly" : {
+			"next" : ["locations.belly.mainEffect"],
+			"none" : {
+				"replace" : {"dialogueRandom":[":chatterBellyNoneFull"]}
+			},
+			"heal" : {
+				"replace" : {"dialogueRandom":[":chatterBellyHealFull"]}
+			},
+			"softDigest" : {
+				"replace" : {"dialogueRandom":[":chatterBellyDigestFull"]}
+			}
+		},
+		"chatterBalls" : {
+			"next" : ["locations.balls.mainEffect"],
+			"none" : {
+				"replace" : {"dialogueRandom":[":chatterBallsNoneFull"]}
+			},
+			"heal" : {
+				"replace" : {"dialogueRandom":[":chatterBallsHealFull"]}
+			},
+			"softDigest" : {
+				"replace" : {"dialogueRandom":[":chatterBallsDigestFull"]}
+			}
+		}
+	},
+
+	"rubBellyFull" : {
+		"finished" : true,
+		"new" : {"dialogueRandom" : [":rubBellyFull"], "dismissTime" : 2, "jump" : false}
+	},
+
+	"rubBallsFull" : {
+		"finished" : true,
+		"new" : {"dialogueRandom" : [":rubBallsFull"], "dismissTime" : 2, "jump" : false}
+	},
+
+	// responses when another character requests an action from them
+	"actionRequested" : {
+		// "<action>" : {
+		// 	// is the action available or not?
+		// 	"true" : {
+		// 		// dialogue said before the action
+		// 		"new" : {"dialogueRandom" : [":<action>Requested"],"dismissTime" : 2, "jump" : false},
+		// 		// dialogue said after the action finishes
+		// 		"after" : {"new" : {"dialogueRandom" : [":<action>RequestedAfter"],"dismissTime" : 2, "jump" : false}}
+		// 	},
+		// 	"false" : {
+		// 		"invalidAction" : {"new":{"dialogueRandom":[":<action>Invalid"],"dismissTime" : 2, "jump" : false}},
+		// 		"no" : {"new" : {"dialogueRandom" : [":<action>No"],"dismissTime" : 2, "jump" : false}},
+		// 		"tooBig" : {"new" : {"dialogueRandom" : [":<action>TooBig"],"dismissTime" : 2, "jump" : false}},
+		// 		"tooSmall" : {"new" : {"dialogueRandom" : [":<action>TooSmall"],"dismissTime" : 2, "jump" : false}},
+		// 		"noSlots" : {"new" : {"dialogueRandom" : [":<action>NoSlots"],"dismissTime" : 2, "jump" : false}},
+		// 		"noSpace" : {"new" : {"dialogueRandom" : [":<action>Full"],"dismissTime" : 2, "jump" : false}},
+		// 		"needsInfusion" : {"new" : {"dialogueRandom" : [":<action>NeedsInfusion"],"dismissTime" : 2, "jump" : false}},
+		// 		"alreadyInfused" : {"new" : {"dialogueRandom" : [":<action>AlreadyInfused"],"dismissTime" : 2, "jump" : false}},
+		// 		"invalidLocation" : ".invalidAction",
+		// 		"settingsMismatch" : ".invalidAction",
+		// 		"targetSettingsMismatch" : ".invalidAction",
+		// 		"targetPreySettingsMismatch" : {"new":{"dialogueRandom":[":<action>TargetPreySettingsMismatch"],"dismissTime" : 2, "jump" : false}}
+		// 	}
+		// },
+		"oralVore" : {
+			// is the action available or not?
+			"true" : {
+				// dialogue said before the action
+				"settings" : "self",
+				"new" : {"dismissTime" : 2, "jump":false},
+				"next" : ["locations.belly.mainEffect"],
+				"none" : {
+					"replace" : {
+						"dialogueRandom" : [":oralVoreRequested"]
+					}
+				},
+				"heal" : {
+					"replace" : {
+						"dialogueRandom" : [":oralVoreRequestedHeal"]
+					}
+				},
+				"softDigest" : {
+					"replace" : {
+						"dialogueRandom" : [":oralVoreRequestedDigest"]
+					}
+				},
+
+				// dialogue said after the action finishes
+				"after" : {"new" : {"dialogueRandom" : [":oralVoreRequestedAfter"],"dismissTime" : 2, "jump" : false}}
+			},
+			"false" : {
+				"invalidAction" : {"new":{"dialogueRandom":[":oralVoreInvalid"],"dismissTime" : 2, "jump" : false}},
+				"no" : {"new" : {"dialogueRandom" : [":oralVoreNo"],"dismissTime" : 2, "jump" : false}},
+				"tooBig" : {"new" : {"dialogueRandom" : [":oralVoreTooBig"],"dismissTime" : 2, "jump" : false}},
+				"tooSmall" : {"new" : {"dialogueRandom" : [":oralVoreTooSmall"],"dismissTime" : 2, "jump" : false}},
+				"noSlots" : {"new" : {"dialogueRandom" : [":oralVoreNoSlots"],"dismissTime" : 2, "jump" : false}},
+				"noSpace" : {"new" : {"dialogueRandom" : [":oralVoreFull"],"dismissTime" : 2, "jump" : false}},
+				"needsInfusion" : {"new" : {"dialogueRandom" : [":oralVoreNeedsInfusion"],"dismissTime" : 2, "jump" : false}},
+				"alreadyInfused" : {"new" : {"dialogueRandom" : [":oralVoreAlreadyInfused"],"dismissTime" : 2, "jump" : false}},
+				"invalidLocation" : ".invalidAction",
+				"settingsMismatch" : ".invalidAction",
+				"targetSettingsMismatch" : ".invalidAction",
+				"targetMissingStatusPrimaryScript" : ".invalidAction",
+				"targetMissingActorScript" : ".invalidAction",
+				"targetPreySettingsMismatch" : {"new":{"dialogueRandom":[":oralVoreTargetPreySettingsMismatch"],"dismissTime" : 2, "jump" : false}}
+			}
+		},
+		"cockVore" : {
+			// is the action available or not?
+			"true" : {
+				"settings" : "self",
+				"new" : {"dismissTime" : 2, "jump":false},
+				"next" : ["locations.balls.mainEffect"],
+				"none" : {
+					"replace" : {
+						"dialogueRandom" : [":cockVoreRequested"]
+					}
+				},
+				"heal" : {
+					"replace" : {
+						"dialogueRandom" : [":cockVoreRequestedHeal"]
+					}
+				},
+				"softDigest" : {
+					"replace" : {
+						"dialogueRandom" : [":cockVoreRequestedDigest"]
+					}
+				},
+
+				// dialogue said after the action finishes
+				"after" : {"new" : {"dialogueRandom" : [":cockVoreRequestedAfter"],"dismissTime" : 2, "jump" : false}}
+			},
+			"false" : {
+				"invalidAction" : {"new":{"dialogueRandom":[":cockVoreInvalid"],"dismissTime" : 2, "jump" : false}},
+				"no" : {"new" : {"dialogueRandom" : [":cockVoreNo"],"dismissTime" : 2, "jump" : false}},
+				"tooBig" : {"new" : {"dialogueRandom" : [":cockVoreTooBig"],"dismissTime" : 2, "jump" : false}},
+				"tooSmall" : {"new" : {"dialogueRandom" : [":cockVoreTooSmall"],"dismissTime" : 2, "jump" : false}},
+				"noSlots" : {"new" : {"dialogueRandom" : [":cockVoreNoSlots"],"dismissTime" : 2, "jump" : false}},
+				"noSpace" : {"new" : {"dialogueRandom" : [":cockVoreFull"],"dismissTime" : 2, "jump" : false}},
+				"needsInfusion" : {"new" : {"dialogueRandom" : [":cockVoreNeedsInfusion"],"dismissTime" : 2, "jump" : false}},
+				"alreadyInfused" : {"new" : {"dialogueRandom" : [":cockVoreAlreadyInfused"],"dismissTime" : 2, "jump" : false}},
+				"invalidLocation" : ".invalidAction",
+				"settingsMismatch" : ".invalidAction",
+				"targetSettingsMismatch" : ".invalidAction",
+				"targetMissingStatusPrimaryScript" : ".invalidAction",
+				"targetMissingActorScript" : ".invalidAction",
+				"targetPreySettingsMismatch" : {"new":{"dialogueRandom":[":cockVoreTargetPreySettingsMismatch"],"dismissTime" : 2, "jump" : false}}
+			}
+		},
+
+		"oralVoreLetout" : {
+			"new" : { "dialogueRandom" : [":oralVoreLetoutRequested"],"dismissTime" : 2, "jump" : false},
+			// "after":{"new" : { "dialogueRandom" : [":oralVoreLetoutRequestedAfter"],"dismissTime" : 2, "jump" : false}}
+		},
+		"cockVoreLetout" : {
+			"new" : { "dialogueRandom" : [":cockVoreLetoutRequested"],"dismissTime" : 2, "jump" : false},
+			// "after":{"new" : { "dialogueRandom" : [":cockVoreLetoutRequestedAfter"],"dismissTime" : 2, "jump" : false}}
+		}
+
+	},
+	// response to when another NPC forces them to do an action
+	"forcedAction" : {
+		// "<action>" : {
+		// 	"new" : { "dialogueRandom" : [":<action>Forced"],"dismissTime" : 2, "jump" : false},
+		// 	"after":{"new" : { "dialogueRandom" : [":<action>ForcedAfter"],"dismissTime" : 2, "jump" : false}}
+		// },
+		"oralVore" : {
+			"new" : { "dialogueRandom" : [":oralVoreForced"],"dismissTime" : 2, "jump" : false},
+			// "after":{"new" : { "dialogueRandom" : [":oralVoreForcedAfter"],"dismissTime" : 2, "jump" : false}}
+		},
+		"cockVore" : {
+			"new" : { "dialogueRandom" : [":cockVoreForced"],"dismissTime" : 2, "jump" : false},
+			// "after":{"new" : { "dialogueRandom" : [":cockVoreForcedAfter"],"dismissTime" : 2, "jump" : false}}
+		},
+
+		"oralVoreLetout" : {
+			"new" : { "dialogueRandom" : [":oralVoreLetoutForced"],"dismissTime" : 2, "jump" : false},
+			// "after":{"new" : { "dialogueRandom" : [":oralVoreLetoutForcedAfter"],"dismissTime" : 2, "jump" : false}}
+		},
+		"cockVoreLetout" : {
+			"new" : { "dialogueRandom" : [":cockVoreLetoutForced"],"dismissTime" : 2, "jump" : false},
+			// "after":{"new" : { "dialogueRandom" : [":cockVoreLetoutForcedAfter"],"dismissTime" : 2, "jump" : false}}
+		}
+	},
+
+	// dialogue for when an occupant interacts with them
+	"occupantInteract" : ".occupantStruggle", // just points to struggle for now, could be it's own dialogue
+	// chance of saying one of these lines when one of their occupants struggles inside them
+	"occupantStruggle" : {
+		"settings" : "target",
+		"new" : {"jump":false},
+		"next" : [
+			"infused",
+			"digested",
+
+			"adjectives",
+			"location",
+
+			"sbq_acidHeal",
+			"sbq_cumHeal",
+
+			"sbq_acidSoftDigest",
+			"sbq_cumSoftDigest",
+
+			"sbq_acidDigest",
+			"sbq_cumDigest",
+
+			"sbq_compression_time",
+
+			"sbqTransformation",
+			"sbqDrainEnergy",
+			"sbqEggify"
+		],
+		"infused" : {"true":".occupantInfused"},
+		"digested" : {"true":".occupantDigested"},
+
+		"adjectives" : {
+		},
+		"location" : {
+			"belly" : {
+				"addQueued" : true,
+				"queueReplace" : {
+					"dialogueRandom" : [":struggleBelly"]
+				}
+			},
+			"balls" : {
+				"addQueued" : true,
+				"queueReplace" : {
+					"dialogueRandom" : [":struggleBalls"]
+				}
+			}
+		},
+		"sbq_acidHeal" : {
+			"clear" : ["dialogueRandom"],
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleAcidHeal"]
+			}
+		},
+		"sbq_cumHeal" : {
+			"clear" : ["dialogueRandom"],
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleCumHeal"]
+			}
+		},
+
+		"sbq_compression_time" : {
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleCompression"]
+			}
+		},
+
+		"sbq_acidDigest" : {
+			"next" : ["sbq_acidDigestResistance"],
+			"clear" : ["dialogueRandom"],
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleAcidDigest"]
+			},
+			"sbq_acidDigestResistance_notPositive" : { // it's a multiplier, so it not being positive means it must be 0 or less, and therefore immune
+				"queueReplace" : {
+					"dialogueRandom" : [":struggleAcidDigestImmune"]
+				}
+			}
+		},
+		"sbq_cumDigest" : {
+			"next" : ["location", "sbq_cumDigestResistance"],
+			"clear" : ["dialogueRandom"],
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleCumDigest"]
+			},
+			"sbq_cumDigestResistance_notPositive" : { // it's a multiplier, so it not being positive means it must be 0 or less, and therefore immune
+				"queueReplace" : {
+					"dialogueRandom" : [":struggleCumDigestImmune"]
+				}
+			}
+		},
+		"sbq_acidSoftDigest" : ".sbq_acidDigest",
+		"sbq_cumSoftDigest" : ".sbq_cumDigest",
+
+		"sbqTransformation" : {
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleTransforming"]
+			}
+		},
+		"sbqDrainEnergy" : {
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleDrainEnergy"]
+			}
+		},
+		"sbqEggify" : {
+			"addQueued" : true,
+			"queueReplace" : {
+				"dialogueRandom" : [":struggleEggify"]
+			}
+		}
+	},
+	"occupantDigested" : {
+		"finished" : true,
+		"settings" : "target",
+		"new" : {"jump":false}
+	}
+}

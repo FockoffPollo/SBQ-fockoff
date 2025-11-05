@@ -1,0 +1,178 @@
+{
+	"oralVoreRequested": [
+		"Enjoy your stay, buddy.",
+		"Mind the teeth. they're quite sharp!",
+		"Take it easy, Think of it like a nice big hug around your whole body!",
+		"Safest place in the galaxy, no one will be able to harm you here!"
+	],
+	"oralVoreRequestedHeal": [
+		"Enjoy your stay, buddy.",
+		"Mind the teeth. they're quite sharp!",
+		"Take it easy, Think of it like a nice big hug around your whole body!",
+		"Safest place in the galaxy, no one will be able to harm you here!",
+		"Welcome to the Rayez healing clinic. Please keep you hands and feet inside the dragon."
+	],
+	"oralVoreRequestedDigest": [
+		"Stay in there for as long as you want, Just not too long.",
+		"Enjoy your stay buddy. Just try not to make me too fat, alright?",
+		"Are you sure? It's going to be a one way trip this time.",
+		"No hard feelings if I digest you?",
+		"One way or another, I will take care of you."
+	],
+	"oralVoreRequestedAfter": "/npcs/sbq/dialogue/default.dialogue:oralVoreRequestedAfter",
+	"cockVoreRequested": [
+		"Enjoy my personal sauna, friend!",
+		"Surely you won't mind if I pleasure myself while you're in there?",
+		"Scrrrr... Now this is more like it! All good in there?",
+		"Safe travels in my balls, buddy!"
+	],
+	"cockVoreRequestedHeal": [
+		"Enjoy my personal sauna, friend!",
+		"Surely you won't mind if I pleasure myself while you're in there?",
+		"Have yourself a nice little cum bath. It will help ease your injuries.",
+		"Scrrrr... Now this is more like it! All good in there?",
+		"Safe travels in my balls, buddy!"
+	],
+	"cockVoreRequestedDigest": [
+		"Try not to make me cum, or else I might just make you cum!",
+		"You want to be my next load? Sure! Why not?",
+		"Stay in there for as long as you want. Just not too long.",
+		"Are you sure? You won't be coming out solid this time around!",
+		"Have fun sloshing about in there, friend!"
+	],
+	"cockVoreRequestedAfter": "/npcs/sbq/dialogue/default.dialogue:cockVoreRequestedAfter",
+	"oralVoreLetoutForced": "/npcs/sbq/dialogue/default.dialogue:oralVoreLetoutForced",
+	"cockVoreLetoutForced": "/npcs/sbq/dialogue/default.dialogue:cockVoreLetoutForced",
+	"struggleBelly": [
+		"All good in there?",
+		"If you need anything, just let me know.",
+		"Just kick back, relax, and enjoy the ride.",
+		"How about I tell you a bedtime story? No? Oh ok..."
+	],
+	"struggleBalls": [
+		"5 more and you might just get a wish!",
+		"You may want to have a shower once you're done in there.",
+		"Enjoying yourself? I'm enjoying myself!",
+		"Comfortable enough for you? Hopefully it's not too sticky in there.",
+		"Is this the greatest sauna you've ever been in or what!?"
+	],
+	"struggleAcidHeal": [
+		"All good in there?",
+		"If you need anything, just let me know.",
+		"Just kick back, relax, and enjoy the ride.",
+		"How about I tell you a bedtime story? No? Oh ok...",
+		"Hold still, just let my body mend your wounds. If you have any that is.",
+		"Check it out! The enzymes in my stomach can heal you. Isn't that neat?"
+	],
+	"struggleCumHeal": [
+		"5 more and you might just get a wish!",
+		"You may want to have a shower once you're done in there.",
+		"Enjoying yourself? I'm enjoying myself!",
+		"I have no clue why my cum has healing properties but I'm not complaining.",
+		"Comfortable enough for you? Hopefully it's not too sticky in there.",
+		"Is this the greatest sauna you've ever been in or what!?"
+	],
+	"struggleAcidDigest": [
+		"No need to worry. You'll come back right? Right!?",
+		"Try not to fall asleep in there, you might wake up as dragon pudge!",
+		"You seem really eager to be part of me. It's kind of unsettling.",
+		"I'm sure you will be just as comfortable on my hips.",
+		"Digesting my friends isn't exactly my thing, but if that's what it takes to make you happy.",
+		"Soon you will be closer to me than ever!"
+	],
+	"struggleCumDigest": [
+		"This is really embarrassing for me, let's just hope no one is watching us.",
+		"I sure hope you don't mind being dragon seed.",
+		"Churning my friends isn't exactly my thing, but if that's what it takes to make you happy.",
+		"Take it easy, just let yourself melt away. You'll wake up back on your ship like nothing ever happened.",
+		"No hard feelings if I use you to heal someone else?",
+		"You seem really eager to be dragon jizz. It's kind of unsettling."
+	],
+	"chatterBellyNoneEmpty": [
+		"Hey there, anything I can help you with?",
+		"I know a great place for you to rest if your interested.",
+		"All that spacefaring must be tiring. How about you stay with me for a bit?",
+		"Ever tried sleeping in a dragon's gut? It's more pleasant than you think.",
+		"I will aid you on your journey. By sitting around and doing absolutely nothing!"
+	],
+	"chatterBellyHealEmpty": [
+		"If you're hurt, I can help mend your wounds if needed.",
+		"Hey there, anything I can help you with?",
+		"I know a great place for you to rest if you're interested.",
+		"All that spacefaring must be tiring. How about you stay with me for a bit?",
+		"Ever tried sleeping in a dragon's gut? It's more pleasant than you think.",
+		"I will aid you on your journey. By sitting around and doing absolutely nothing!"
+	],
+	"chatterBellyDigestEmpty": [
+		"Careful, there's a very hungry dragon lurking around here. You're totally not looking at him right now.",
+		"Hey there, anything I can help you with?",
+		"Would you like to know me a little bit closer?",
+		"I'm a little hungry right now. Do you have any snacks for me?",
+		"Ever wondered what it's like to be pudge of a dragon's rear? Well, here's your chance to find out!",
+		"I will aid you on your journey. By sitting around and doing absolutely nothing!"
+	],
+	"chatterBellyNoneFull": ":chatterBellyHealFull",
+	"chatterBellyHealFull": [
+		"Maybe another time. I'm a little busy right now, as you can see.",
+		"You mind coming back later? I have someone else I need to attend to.",
+		"Sorry, Hotel Rayez is closed for today. Come back later.",
+		"Hey there, *URP* oh excuse me."
+	],
+	"chatterBellyDigestFull": [
+		"Pssst. stop squirming in there, you're making this awkward...",
+		"Uhhh... Privacy please?",
+		"What are you looking at me like that for? You want in next?"
+	],
+	"chatterBallsNoneEmpty": [
+		"Hey there, anything I can help you with?",
+		"I know a great place for you to rest if you're interested.",
+		"All that spacefaring must be tiring. How about you stay with me for a bit?",
+		"Care to spend the night in my personal sauna? Just slide into my shaft and I'll do the rest."
+	],
+	"chatterBallsHealEmpty": [
+		"If you're hurt, I can help mend your wounds if needed. Though it may get a bit sticky.",
+		"Hey there, anything I can help you with?",
+		"I know a great place for you to rest if you're interested.",
+		"All that spacefaring must be tiring. How about you stay with me for a bit?",
+		"Care to spend the night in my personal sauna? Just slide into my shaft and I'll do the rest."
+	],
+	"chatterBallsDigestEmpty": [
+		"Would you like a nice warm cum bath? Would you like to be the cum bath?!",
+		"Do you mind helping me with somthing? My balls could use a refill.",
+		"Ever wondered what it's like to be a puddle of dragon cum? Well, here's your chance to find out!",
+		"No offence but you would look quite nice hanging between my legs.",
+		"Would you like to know me a little bit closer?",
+		"Hey there, anything I can help you with?"
+	],
+	"chatterBallsNoneFull": ":chatterBallsHealFull",
+	"chatterBallsHealFull": [
+		"Maybe annother time. I'm a little busy right now, as you can see.",
+		"You mind coming back later? I have someone else I need to attend to.",
+		"Sorry, my personal sauna is occupied right now. Come back later.",
+		"Hey! My eyes are up here!"
+	],
+	"chatterBallsDigestFull": [
+		"Please stay out of the splash zone, I really don't want to ruin those nice clothes of yours.",
+		"Pssst. stop squirming in there you're making this awkward...",
+		"Uhhh... Privacy please?",
+		"What are you looking at me like that for? You want in next?"
+	],
+	"rubBellyFull": [
+		"What!? Are you serious?! I didn't say stop!",
+		"Rrrrr... Did I just purr!?",
+		"Don't touch me there...",
+		"A little to the left, please.",
+		"Maybe later you can rub my insides, if you want.",
+		"I could get used to this."
+	],
+	"rubBallsFull": [
+		"What!? Are you serious?! I didn't say stop!",
+		"Rrrrr... Did I just purr!?",
+		"Don't touch me there...",
+		"A little to the left, please.",
+		"Oh stop it, you!",
+		"I could get used to this."
+	],
+	"vanilla": {},
+	// Unused Dialogue
+}

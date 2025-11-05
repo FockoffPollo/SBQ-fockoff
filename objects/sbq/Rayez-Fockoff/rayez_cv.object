@@ -1,0 +1,212 @@
+{
+	"objectName" : "sbq/rayez_cv_test",
+	"colonyTags" : ["cockVore", "sbq"],
+	"rarity" : "Rare",
+	"description" : "Rayez! Animation by Fockoff.",
+	"shortdescription" : "Rayez (CV)",
+	"inventoryIcon" : "icon.png",
+	"race" : "generic",
+	"category" : "furniture",
+	"printable" : false,
+	"price" : 1000,
+	"retainObjectParametersInItem" : true,
+	"entityName" : "Rayez",
+	"orientations" : [
+		{
+			"dualImage" : "rayez_cv.png:0-idle.1",
+			"imagePosition" : [-41, -32],
+			"animationPosition" : [0, -3],
+			"mouthPosition" : [1.8, -0.5],
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ]
+		}
+	],
+	"animation": "rayez.animation",
+	"animationCustom" : {
+		"globalTagDefaults" : {
+			"bodyImage" : "rayez_cv.png"
+		}
+	},
+	"scripts" : ["rayez.lua"],
+	"dialogueTree" : "/objects/sbq/Rayez-Fockoff/rayez.dialogueTree",
+	"chatterTargets" : ["player", "npc"],
+	"chatterRange" : 5,
+	"chatterDelayMin" : 10,
+	"chatterDelayMax" : 30,
+	"voreConfig" : [
+		"/humanoid/any/basicActions.config",
+		"/humanoid/any/disableAllInfusePred.config",
+		"/humanoid/any/disableAllInfusePrey.config",
+		"/humanoid/any/disableAllVorePrey.config",
+		"/humanoid/any/disableAllTF.config",
+		"/humanoid/any/disableAllSize.config",
+		{
+			"seatCount" : 1,
+			"species" : "Rayez",
+			"occupantStruggleDialogueMin" : 10,
+			"occupantStruggleDialogueMax" : 30,
+			"pred" : {},
+			"prey" : {},
+			"actionList" : [
+				{"action":"cockVore"}
+			],
+			"availableVoreTypes" : {
+				"cockVore":true
+			},
+			"defaultSettings" : {
+				"locations" : {"balls":{
+					"mainEffect" : "softDigest"
+				}}
+			},
+			"settingsOrder" : [
+				"displayEffect",
+				"escapeDifficulty",
+				"acidDigestPower",
+				"recentlyDigested"
+			],
+			"overrideSettings" : {
+				"acidDigestDrops" : false,
+				"vorePrefs":{"cockVore":{"pred":true}}, // because why would it ever *not* be an OV pred
+				"interactDialogue" : false,
+				"actionDialogue" : true,
+				"questParticipation" : false,
+				"offerQuests" : false
+			},
+			"invalidSettings" : { // map of settings with invalid values mapped to a replacement value in the case of importing settings
+				"mainEffect" : {"digest":"softDigest"}
+			},
+			"locations" : {
+				"balls" : {
+					"activeSettings" : {"vorePrefs":{"cockVore":{"pred":true}}},
+					"struggleSizes" : [0,1],
+					"maxFill":1.5,
+					"maxCount":1,
+					"subLocations" : false,
+                    "countBasedOccupancy" : true,
+					"sizeChangeAnims" : {
+						"bodyState" : "<ballsCount>-idle", // This only considers the number of prey, so macro/micro stuff will seem off
+                        //"bodyState" : "<ballsSize>-idle", // Takes size into consideration, but doesn't line up with the animation
+						"ballsExpandState":"<prevCount>-to-<newCount>"
+                        //"ballsExpandState":"<prevSize>-to-<newSize>"
+					},
+					"secondaryEffects" : {
+						"eggify" : false
+					}
+				}
+			},
+			"states" : {
+				"default" : {
+					"actions" : {
+						"cockVore" : {
+							"targetSettings" : {"vorePrefs":{"cockVore":{"prey":true}}},
+							"settings" : {"vorePrefs":{"cockVore":{"pred":true}}},
+							"script" : "tryVore",
+							"animations" : {
+								"<occupant>State" : "cockVore",
+								"eatState" : "eat"
+							},
+							"location" : "balls",
+							"throughput" : 1.5
+						},
+						"cockVoreLetout" : {
+							"targetSettings" : {"vorePrefs":{"cockVore":{"prey":true}}},
+							"settings" : {"vorePrefs":{"cockVore":{"pred":true}}},
+							"script" : "tryLetout",
+							"animations" : {
+								"<occupant>State" : ["cockVore", true, true],
+								"eatState" : ["eat", true, true]
+							},
+							"location" : "balls",
+							"throughput" : 1.5,
+							"applyStatusEffects" : [
+								["sbqWetCum"]
+							]
+						},
+						"digested" : {
+							"animations" : {
+								"digestedState" : "digested"
+							}
+						},
+						"rubBalls" : {
+							"script" : "rubBalls"
+						}
+					},
+					"locations" : {
+						"balls":{
+							"entryTypes" : ["cockVore"],
+							"struggleActions" : {
+								"any" : {
+									"pressAnimations":{"<occupant>State":["s_<s_direction>",false,false,true]},
+									// minimum, maximum
+									"time" : [10,15], // hold time for struggles to trigger action, checked once for every second held
+									"count" : [10,30] // count of struggles to trigger action
+								},
+								"front" : {"indicate":"red", "action":"cockVoreLetout"},
+								"down" : {},
+								"up" : {},
+								"back" : {}
+							}
+						}
+					},
+					"interactActions" : {
+						"cockVore" : {
+							"aimPart":"body","aim":"cockVore", "aimRadius" : 2,
+							"posPart":"body","pos":"front"
+						},
+						// Location to interact with to "rub" the pred instead of requesting vore
+						"rubBalls" : {
+							"aimPart":"body","aim":"balls", "aimRadius" : 3,
+							"posPart":"body","pos":"balls"
+						}
+					}
+				}
+			}
+		}
+	],
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+
+	"stats" : {
+		"maxEnergy" : {
+			"baseValue" : 100.0
+		},
+		"energyRegenPercentageRate" : {
+			"baseValue" : 0.585  // 1.75 second recharge time (STABLE)
+			// "baseValue" : 0.5    // 2 second recharge time
+			// "baseValue" : 0.45      // 2.25 second recharge time
+			// "baseValue" : 0.4     // 2.5 second recharge time
+		},
+		"foodDelta" : {
+			"baseValue" : -0.0583 // -70 food over 20 minutes
+		}
+	},
+	"resources" : {
+		"energy" : {
+			"maxStat" : "maxEnergy",
+			"defaultPercentage" : 1.0
+		},
+		"energyRegenBlock" : {
+			"maxValue" : 1.0,
+			"deltaValue" : -1.0,
+			"initialPercentage" : 0.0
+		},
+		"food" : {
+			"deltaStat" : "foodDelta",
+			"initialPercentage" : 1.0,
+			"maxValue" : 70
+		}
+	},
+	"loungePositions" : {
+		"occupant0" : {
+			"part" : "occupant0",
+			"partAnchor" : "loungeOffset",
+			"orientation" : "stand",
+			"statusEffects" : [],
+			"dance": "sbqIdle",
+			"enabled" : false,
+			"handlesDrawables" : true
+		}
+	},
+
+	"objectType" : "loungeable"
+}
