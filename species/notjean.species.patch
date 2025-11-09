@@ -356,8 +356,8 @@
 			"sourceImage": "/humanoid/any/sbqModules/cock/notjean.png",
 			"remapDirectives": [
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				]
 			]
 		},
@@ -365,8 +365,8 @@
 			"sourceImage": "/humanoid/any/sbqModules/cock/notjean.png",
 			"remapDirectives": [
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				]
 			]
 		},
@@ -428,8 +428,8 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
 			"remapDirectives": [
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				],
 				[
 					"primary_180",
@@ -437,7 +437,7 @@
 				],
 				[
 					"flesh",
-					"secondary"
+					"flesh"
 				]
 			]
 		},
@@ -445,8 +445,8 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
 			"remapDirectives": [
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				],
 				[
 					"primary_180",
@@ -454,7 +454,7 @@
 				],
 				[
 					"flesh",
-					"secondary"
+					"flesh"
 				]
 			]
 		},
@@ -465,12 +465,12 @@
 					"primary_180"
 				],
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				],
 				[
 					"flesh",
-					"secondary"
+					"flesh"
 				]
 			]
 		},
@@ -481,12 +481,12 @@
 					"primary_180"
 				],
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				],
 				[
 					"flesh",
-					"secondary"
+					"flesh"
 				]
 			]
 		},
@@ -494,8 +494,8 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
 			"remapDirectives": [
 				[
-					"primary",
-					"primary"
+					"flesh",
+					"flesh"
 				],
 				[
 					"primary_180",
@@ -503,7 +503,7 @@
 				],
 				[
 					"flesh",
-					"primary"
+					"flesh"
 				]
 			]
 		},
