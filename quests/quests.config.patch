@@ -1,0 +1,17 @@
+[
+	{
+		"op": "add",
+		"path": "/initialquests/notjean",
+		"value": [
+			"protectorate"
+		]
+	},
+	{
+		"op": "add",
+		"path": "/pronounGenders/notjean",
+		"value": {
+			"male": "neutral",
+			"female": "neutral"
+		}
+	}
+]

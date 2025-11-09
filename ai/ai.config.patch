@@ -1,0 +1,10 @@
+[{
+		"op" : "add",
+		"path" : "/species/notjean",
+		"value" : {
+			"aiFrames" : "GlitchAI.png",
+			"portraitFrames" : "portraits/glitchportrait.png",
+			"staticFrames" : "staticGlitch.png"	
+		}
+	}
+]

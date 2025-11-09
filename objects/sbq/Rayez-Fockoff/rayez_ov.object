@@ -4,6 +4,7 @@
 	"rarity" : "Rare",
 	"description" : "Rayez! Animation by Fockoff.",
 	"shortdescription" : "Rayez (OV)",
+	"builder" : "/scripts/item/SBQ_build_desc.lua",
 	"inventoryIcon" : "icon.png",
 	"race" : "generic",
 	"category" : "furniture",
@@ -27,140 +28,143 @@
 			"bodyImage" : "rayez_ov.png"
 		}
 	},
-	//"digestedAnimation" : {
-	//	"digestedStateType" : "digestedState",
-	//	"digestedState" : "digested"
-	//},
 	"scripts" : ["rayez.lua"],
 	"dialogueTree" : "/objects/sbq/Rayez-Fockoff/rayez.dialogueTree",
 	"chatterTargets" : ["player", "npc"],
 	"chatterRange" : 5,
 	"chatterDelayMin" : 10,
 	"chatterDelayMax" : 30,
-	"voreConfig" : [
-		"/humanoid/any/basicActions.config",
-		"/humanoid/any/disableAllInfusePred.config",
-		"/humanoid/any/disableAllInfusePrey.config",
-		"/humanoid/any/disableAllVorePrey.config",
-		"/humanoid/any/disableAllTF.config",
-		"/humanoid/any/disableAllSize.config",
-		{
-			"seatCount" : 1,
-			"species" : "Rayez",
-			"occupantStruggleDialogueMin" : 10,
-			"occupantStruggleDialogueMax" : 30,
-			"pred" : {},
-			"prey" : {},
-			"actionList" : [
-				{"action":"oralVore"}
-			],
-			"availableVoreTypes" : {
-				"oralVore":true
-			},
-			"defaultSettings" : {
-				"locations" : {"belly":{
-					"mainEffect" : "heal"
-				}}
-			},
-			"settingsOrder" : [
-				"displayEffect",
-				"escapeDifficulty",
-				"acidDigestPower",
-				"recentlyDigested"
-			],
-			"overrideSettings" : {
-				"acidDigestDrops" : false,
-				"vorePrefs":{"oralVore":{"pred":true}}, // because why would it ever *not* be an OV pred
-				"interactDialogue" : false,
-				"actionDialogue" : true,
-				"questParticipation" : false,
-				"offerQuests" : false
-			},
-			"invalidSettings" : { // map of settings with invalid values mapped to a replacement value in the case of importing settings
-				"mainEffect" : {"digest":"heal"}
-			},
-			"locations" : {
-				"belly" : {
-					"activeSettings" : {"vorePrefs":{"oralVore":{"pred":true}}},
-					"struggleSizes" : [0,1],
-					"maxFill":1.5,
-					"maxCount":1,
-                    "countBasedOccupancy" : true,
-					"sizeChangeAnims" : {
-						"bodyState" : "<bellyCount>-idle", // This only considers the number of prey, so macro/micro stuff will seem off
-                        //"bodyState" : "<bellySize>-idle", // Takes size into consideration, but doesn't line up with the animation
-						"bellyExpandState":"<prevCount>-to-<newCount>"
-                        //"bellyExpandState":"<prevSize>-to-<newSize>"
-					},
-					"secondaryEffects" : {
-						"eggify" : false
-					}
+	"sbqSettingsConfig" : {
+		"hideOtherSettings" : true,
+		"hidePreySettings" : true,
+		"hideTFsettings" : true,
+		"hideSizeSettings" : true,
+		"includes" : [
+			"/species/sbq/disableAllInfusePred.config",
+			"/species/sbq/disableAllInfusePrey.config",
+			"/species/sbq/disableAllVorePrey.config",
+			"/species/sbq/disableAllTF.config"
+		],
+		"defaultSettings" : {"any":{
+			"locations" : {"belly":{
+				"mainEffect" : "heal"
+			}}
+		}},
+		"overrideSettings" : {"any":{
+			"acidDigestDrops" : false,
+			"vorePrefs":{"oralVore":{"pred":true}},
+			"interactDialogue" : false,
+			"actionDialogue" : true,
+			"questParticipation" : false,
+			"offerQuests" : false
+		}},
+		"invalidSettings" : {"any":{ // map of settings with invalid values mapped to a replacement value in the case of importing settings
+			"mainEffect" : {"digest":"heal"}
+		}},
+		"settingsOrder" : [
+			"displayEffect",
+			"escapeDifficulty",
+			"acidDigestPower",
+			"recentlyDigested"
+		]
+	},
+	"sbqConfig" : {
+		"includes" : [
+			"/humanoid/any/sbqModules/base/sbqModule.config"
+		],
+		"seatCount" : 1,
+		"species" : "Rayez",
+		"occupantStruggleDialogueMin" : 10,
+		"occupantStruggleDialogueMax" : 30,
+		"pred" : {},
+		"prey" : {},
+		"actionList" : [
+			{"action":"oralVore"}
+		],
+		"availableVoreTypes" : {
+			"oralVore":true
+		},
+		"locations" : {
+			"belly" : {
+				"activeSettings" : {"vorePrefs":{"oralVore":{"pred":true}}},
+				"struggleSizes" : [0,1],
+				"maxFill":1.5,
+				"maxCount":1,
+				"countBasedOccupancy" : true,
+				"sizeChangeAnims" : {
+					"body" : "<bellyCount>-idle", // This only considers the number of prey, so macro/micro stuff will seem off
+					//"bodyState" : "<bellySize>-idle", // Takes size into consideration, but doesn't line up with the animation
+					"bellyExpandState":"<prevCount>-to-<newCount>"
+					//"bellyExpandState":"<prevSize>-to-<newSize>"
+				},
+				"secondaryEffects" : {
+					"eggify" : false
 				}
-			},
-			"states" : {
-				"default" : {
-					"actions" : {
-						"oralVore" : {
-							"targetSettings" : {"vorePrefs":{"oralVore":{"prey":true}}},
-							"settings" : {"vorePrefs":{"oralVore":{"pred":true}}},
-							"script" : "tryVore",
-							"animations" : {
-								"<occupant>State" : "oralVore",
-								"eatState" : "eat"
-							},
-							"location" : "belly",
-							"throughput" : 1.5
+			}
+		},
+		"states" : {
+			"default" : {
+				"actions" : {
+					"oralVore" : {
+						"targetSettings" : {"vorePrefs":{"oralVore":{"prey":true}}},
+						"settings" : {"vorePrefs":{"oralVore":{"pred":true}}},
+						"script" : "tryVore",
+						"animations" : {
+							"<occupant>State" : "oralVore",
+							"eatState" : "eat"
 						},
-						"oralVoreLetout" : {
-							"targetSettings" : {"vorePrefs":{"oralVore":{"prey":true}}},
-							"settings" : {"vorePrefs":{"oralVore":{"pred":true}}},
-							"script" : "tryLetout",
-							"animations" : {
-								"<occupant>State" : ["oralVore", true, true],
-								"eatState" : ["eat", true, true]
-							},
-							"location" : "belly",
-							"throughput" : 1.5,
-							"applyStatusEffects" : [
-								["sbqWetDrool"]
-							]
-						},
-						"rubBelly" : {
-							"script" : "rubBelly"
-						}
+						"location" : "belly",
+						"throughput" : 1.5
 					},
-					"locations" : {
-						"belly":{
-							"entryTypes" : ["oralVore"],
-							"struggleActions" : {
-								"any" : {
-									"pressAnimations":{"<occupant>State":["s_<s_direction>",false,false,true]},
-									// minimum, maximum
-									"time" : [10,15], // hold time for struggles to trigger action, checked once for every second held
-									"count" : [10,30] // count of struggles to trigger action
-								},
-								"front" : {},
-								"down" : {},
-								"up" : {"indicate":"red", "action":"oralVoreLetout"},
-								"back" : {}
-							}
-						}
-					},
-					"interactActions" : {
-						"oralVore" : {
-							"aimPart":"body","aim":"oralVore", "aimRadius" : 3,
-							"posPart":"body","pos":"front"
+					"oralVoreLetout" : {
+						"targetSettings" : {"vorePrefs":{"oralVore":{"prey":true}}},
+						"settings" : {"vorePrefs":{"oralVore":{"pred":true}}},
+						"script" : "tryLetout",
+						"animations" : {
+							"<occupant>State" : ["oralVore", true, true],
+							"eatState" : ["eat", true, true]
 						},
-						// Location to interact with to "rub" the pred instead of requesting vore
-						"rubBelly" : {
-							"aimPart":"body","aim":"belly", "aimRadius" : 3,
-							"posPart":"body","pos":"belly"
+						"location" : "belly",
+						"throughput" : 1.5,
+						"applyStatusEffects" : [
+							["sbqWetDrool"]
+						]
+					},
+					"rubBelly" : {
+						"script" : "rubBelly"
+					}
+				},
+				"locations" : {
+					"belly":{
+						"entryTypes" : ["oralVore"],
+						"struggleActions" : {
+							"any" : {
+								"pressAnimations":{"<occupant>State":["s_<s_direction>",false,false,true]},
+								// minimum, maximum
+								"time" : [10,15], // hold time for struggles to trigger action, checked once for every second held
+								"count" : [10,30] // count of struggles to trigger action
+							},
+							"front" : {},
+							"down" : {},
+							"up" : {"indicate":"red", "action":"oralVoreLetout"},
+							"back" : {}
 						}
+					}
+				},
+				"interactActions" : {
+					"oralVore" : {
+						"aimPart":"body","aim":"oralVore", "aimRadius" : 3,
+						"posPart":"body","pos":"front"
+					},
+					// Location to interact with to "rub" the pred instead of requesting vore
+					"rubBelly" : {
+						"aimPart":"body","aim":"belly", "aimRadius" : 3,
+						"posPart":"body","pos":"belly"
 					}
 				}
 			}
 		}
-	],
+	},
 	"slaveControlTimeout" : 2.0,
 	"slaveControlHeartbeat" : 1.0,
 
@@ -195,8 +199,8 @@
 		}
 	},
 	"loungePositions" : {
-		"occupant0" : {
-			"part" : "occupant0",
+		"occupant1" : {
+			"part" : "occupant1",
 			"partAnchor" : "loungeOffset",
 			"orientation" : "stand",
 			"statusEffects" : [],

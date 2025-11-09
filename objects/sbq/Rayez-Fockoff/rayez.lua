@@ -1,20 +1,20 @@
 require("/scripts/object/SBQ_vore_object.lua")
-require("/humanoid/any/voreScripts.lua")
+require("/humanoid/any/sbqModules/base/voreScripts.lua")
 local Rayez = {
 	states = {
 		default = {},
 	},
 	locations = {}
 }
-setmetatable(Rayez, Species.default)
+setmetatable(Rayez, sbq.SpeciesScripts.default)
 for k, v in pairs(Rayez.states) do
-	setmetatable(v, Species.default.states[k] or _State)
+	setmetatable(v, sbq.SpeciesScripts.default.states[k] or _State)
 end
 for k, v in pairs(Rayez.locations) do
-	setmetatable(v, Species.default.locations[k] or _Location)
+	setmetatable(v, sbq.SpeciesScripts.default.locations[k] or _Location)
 end
 
-Species.Rayez = Rayez
+sbq.SpeciesScripts.Rayez = Rayez
 Rayez.__index = Rayez
 
 function Rayez:init()
@@ -37,20 +37,20 @@ function default:uninit()
 end
 
 function default:rubBelly(args)
-	if dialogueProcessor and dialogueProcessor.getDialogue(".rubBelly" .. (Occupants.checkActiveOccupants() and "Full" or "Empty")) then
+	if dialogueProcessor and dialogueProcessor.getDialogue(".rubBelly" .. (sbq.Occupants.checkActiveOccupants() and "Full" or "Empty")) then
 		dialogueProcessor.speakDialogue()
 	end
 end
 
 function default:rubBalls(args)
-	if dialogueProcessor and dialogueProcessor.getDialogue(".rubBalls" .. (Occupants.checkActiveOccupants() and "Full" or "Empty")) then
+	if dialogueProcessor and dialogueProcessor.getDialogue(".rubBalls" .. (sbq.Occupants.checkActiveOccupants() and "Full" or "Empty")) then
 		dialogueProcessor.speakDialogue()
 	end
 end
 
 function doChatter()
 	-- Only play chatter dialogue if there's someone nearby on the outside to hear it
-	if checkSpectator() and dialogueProcessor and dialogueProcessor.getDialogue(".chatter" .. (Occupants.checkActiveOccupants() and "Full" or "Empty")) then
+	if checkSpectator() and dialogueProcessor and dialogueProcessor.getDialogue(".chatter" .. (sbq.Occupants.checkActiveOccupants() and "Full" or "Empty")) then
 		dialogueProcessor.speakDialogue()
 	end
 end
@@ -61,12 +61,12 @@ function checkSpectator()
 	local spectators = world.entityQuery(entity.position(), config.getParameter("chatterRange", 5), {
 		withoutEntityId = entity.id(), includedTypes = config.getParameter("chatterTargets", { "player" })
 	})
-	if #spectators > #Occupants.list then
+	if #spectators > #sbq.Occupants.list then
 		return true
 	else
 		for _, v in ipairs(spectators) do
 			local isPrey = false
-			for _, prey in ipairs(Occupants.list) do
+			for _, prey in ipairs(sbq.Occupants.list) do
 				if prey.entityId == v then
 					isPrey = true
 					break

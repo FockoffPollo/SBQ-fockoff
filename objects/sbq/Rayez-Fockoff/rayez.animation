@@ -1,5 +1,5 @@
 {
-	"useModifiedAnimator" : true, // simple boolean to mark that this should be using the expanded featureset of the animator from my engine modifications
+	"version" : 1, // simple boolean to mark that this should be using the expanded featureset of the animator from my engine modifications
 	"globalTagDefaults" : {},
 	"animatedParts": {
 		"stateTypes": {
@@ -40,7 +40,7 @@
 					"0-to-1": {"frames": 14,"cycle": 1.5,"mode": "transition","transition": "ignore"}
 				}
 			},
-			"bodyState": {
+			"body": {
 				"priority" : 1,
 				"default": "0-idle",
 				"states": {
@@ -48,7 +48,7 @@
 					"1-idle": {"frames": 4,"cycle": 0.75,"mode": "loop"}
 				}
 			},
-			"occupant0Location" : {
+			"occupant1Location" : {
 				"priority" : 1,
 				"default" : "idle",
 				"states" : {
@@ -57,7 +57,7 @@
 					"balls": {"frames": 1,"cycle": 0,"mode": "end"}
 				}
 			},
-			"occupant0State" : {
+			"occupant1State" : {
 				"priority" : 2,
 				"default" : "idle",
 				"states" : {
@@ -65,59 +65,58 @@
 					"oralVore": {"frames": 2,"cycle": 1.5,"mode": "transition", "transition": "idle"},
 					"cockVore": {"frames": 2,"cycle": 1.5,"mode": "transition", "transition": "idle"},
 					"s_front": { "frames": 3, "cycle": 0.5, "mode": "transition", "transition": "idle",
-						"frameProperties" : {"occupant0" : [
-							{"translate":[0,0]},
-							{"translate":[0.125,0]},
-							{"translate":[0,0]}
+						"frameProperties" : {"occupant1" : [
+							[["reset"], ["translate",[0,0]]],
+							[["reset"], ["translate",[0.125,0]]],
+							[["reset"], ["translate",[0,0]]]
 						]}
 					},
 					"s_back": { "frames": 3, "cycle": 0.5, "mode": "transition", "transition": "idle",
-						"frameProperties" : {"occupant0" : [
-							{"translate":[0,0]},
-							{"translate":[-0.125,0]},
-							{"translate":[0,0]}
+						"frameProperties" : {"occupant1" : [
+							[["reset"], ["translate",[0,0]]],
+							[["reset"], ["translate",[-0.125,0]]],
+							[["reset"], ["translate",[0,0]]]
 						]}
 					},
 					"s_up": { "frames": 3, "cycle": 0.5, "mode": "transition", "transition": "idle",
-						"frameProperties" : {"occupant0" : [
-							{"translate":[0,0]},
-							{"translate":[0,0.125]},
-							{"translate":[0,0]}
+						"frameProperties" : {"occupant1" : [
+							[["reset"], ["translate",[0,0]]],
+							[["reset"], ["translate",[0,0.125]]],
+							[["reset"], ["translate",[0,0]]]
 						]}
 					},
 					"s_down": { "frames": 3, "cycle": 0.5, "mode": "transition", "transition": "idle",
-						"frameProperties" : {"occupant0" : [
-							{"translate":[0,0]},
-							{"translate":[0,-0.125]},
-							{"translate":[0,0]}
+						"frameProperties" : {"occupant1" : [
+							[["reset"], ["translate",[0,0]]],
+							[["reset"], ["translate",[0,-0.125]]],
+							[["reset"], ["translate",[0,0]]]
 						]}
 					}
 				}
 			}
 		},
 		"parts": {
-			"occupant0" : {
+			"occupant1" : {
 				"properties" : {
 					"centered":true,
 					"zLevel":0,
 					"loungeOffset" : [0,0],
-					"interpolated" : true,
-					"transformationGroups" : ["occupant0"],
+					"interpolated" : false,
+					"transformationGroups" : ["occupant1"],
 					"hidden":true,
 					"dance" : "sbqIdle",
 					"orientation" : "stand",
-					"emote" : "idle",
-					"transforms": {"scale":[0,0]}
+					"emote" : "idle"
 				},
 				"partStates" : {
-					"occupant0Location" :{
+					"occupant1Location" :{
 						"belly" : {
 							"properties":{
 								"offset" : [1.8,0]
 							},
 							"frameProperties":{
 								"transforms":[
-									{"translate":[0,-1.8], "scale":[1,1]}
+									[["reset"], ["translate",[0,-1.8]], ["scale",[1,1]]]
 								]
 							}
 						},
@@ -127,26 +126,33 @@
 							},
 							"frameProperties":{
 								"transforms":[
-									{"translate":[0,-2], "scale":[1,1]}
+									[["reset"], ["translate",[0,-2]], ["scale",[1,1]]]
 								]
 							}
 						}
 					},
-					"occupant0State":{
+					"occupant1State":{
 						"oralVore" : {"frameProperties":{
 							"transforms":[
-								{"translate":[1.8,1], "scale":[1,1]},
-								{"translate":[1.8,-1.8], "scale":[0,0]}
+								[["reset"], ["translate",[1.8,1]], ["scale",[1,1]]],
+								[["reset"], ["translate",[1.8,-1.8]], ["scale",[0.001,0.001]]]
 							]
+						}, "properties" : {
+							"interpolated" : true
 						}},
 						"cockVore" : {"frameProperties":{
 							"transforms":[
-								{"translate":[3,-1.5], "scale":[1,1]},
-								{"translate":[1.4,-1.5], "scale":[0,0]}
+								[["reset"], ["translate",[3,-1.5]], ["scale",[1,1]]],
+								[["reset"], ["translate",[1.4,-1.5]], ["scale",[0.001,0.001]]]
 							]
+						}, "properties" : {
+							"interpolated" : true
 						}}
 					}
 				}
+			},
+			"anchor" : {
+				"centered": true
 			},
 			"body": {
 				"properties": {
@@ -168,21 +174,21 @@
 						// being able to tell it to use the anim and that specific anim's frames as a tag is
 						// one of my engine modifications, you would still have to define it like before in vanilla
 						// I just made some shorthand stuff to make things easier on people
-						"eat": {"properties": {"image": "<bodyImage>:<eatStateAnim>.<eatStateFrame>"}}
+						"eat": {"properties": {"image": "<bodyImage>:<eatState_state>.<eatState_frame>"}}
 					},
 					"digestedState" : {
-						"digested": {"properties": {"image": "<bodyImage>:<digestedStateAnim>.<digestedStateFrame>"}}
+						"digested": {"properties": {"image": "<bodyImage>:<digestedState_state>.<digestedState_frame>"}}
 					},
 					"bellyExpandState" : {
-						"1-to-0": {"properties": {"image": "<bodyImage>:<bellyExpandStateAnim>-<bellyExpandStateFrame>"}},
+						"1-to-0": {"properties": {"image": "<bodyImage>:<bellyExpandState_state>-<bellyExpandState_frame>"}},
 						"0-to-1": "1-to-0"
 					},
 					"ballsExpandState" : {
-						"1-to-0": {"properties": {"image": "<bodyImage>:<ballsExpandStateAnim>-<ballsExpandStateFrame>"}},
+						"1-to-0": {"properties": {"image": "<bodyImage>:<ballsExpandState_state>-<ballsExpandState_frame>"}},
 						"0-to-1": "1-to-0"
 					},
-					"bodyState": {
-						"0-idle": {"properties": {"image": "<bodyImage>:<bodyStateAnim>.<bodyStateFrame>"}},
+					"body": {
+						"0-idle": {"properties": {"image": "<bodyImage>:<body_state>.<body_frame>"}},
 						"1-idle": "0-idle"
 					}
 				}
@@ -197,6 +203,6 @@
 		"slurp" : [ "/sfx/vore/common/slurp.ogg" ]
 	},
 	"transformationGroups" :{
-		"occupant0" : {"interpolated" : true}
+		"occupant1" : {"interpolated" : true}
 	}
 }
