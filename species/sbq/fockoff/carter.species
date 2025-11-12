@@ -5,7 +5,10 @@
 	"subTitle" : "O2",
 	"description" : "Theres not disposal content in SBQ yet."
 	},
-	"nameGen" : [ "/species/humanmalenamegen.config:names", "/species/humanfemalenamegen.config:names" ],
+	"forceName": "Carter",
+	"nameGen" : [ "/species/sbq/fockoff/carter.species:nameGenConfig", "/species/sbq/fockoff/carter.species:nameGenConfig" ],
+	"nameGenConfig": ["Carter"],
+
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
 	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/carter", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/carter/dead.png",
@@ -131,8 +134,9 @@
 		{ "d9c189" : "eaeaea", "a38d59" : "b8b8b8", "735e3a" : "828282" }
 	],
 
-		"sbqCompatible" : true, // marks this species as compatible with SBQ
-	"sbqTFAny" : true, // maeks this species
+	"sbqCompatible" : true, // marks this species as compatible with SBQ
+	"sbqTFAny" : false,
+	"charCreationPatch" : false,
 	"sbqHubNPCs" : [ // list of NPCs that can spawn in the SBQ hub world
 		{"level": 1, "species": "sbq/fockoff/carter", "type": "sbqVoreVillager", "overrides": {}}
 	],
