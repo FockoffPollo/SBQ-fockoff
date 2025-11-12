@@ -1,7 +1,7 @@
 {
   "kind" : "sbq/fockoff/carter",
 	"charCreationTooltip" : {
-	"title" : "sbq/fockoff/carter",
+	"title" : "Carter",
 	"subTitle" : "O2",
 	"description" : "Theres not disposal content in SBQ yet."
   },

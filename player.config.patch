@@ -1,3 +1,4 @@
 [
-{ "op" : "add", "path" : "/defaultCodexes/sbq/fockoff/notjean", "value" : [ "protectorate1", "protectorate2" ] },{ "op" : "add", "path" : "/defaultCodexes/sbq/fockoff/carter", "value" : [ "protectorate1", "protectorate2" ] }
+{ "op" : "add", "path" : "/defaultCodexes/sbq/fockoff/notjean", "value" : [ "protectorate1", "protectorate2" ] },
+{ "op" : "add", "path" : "/defaultCodexes/sbq/fockoff/carter", "value" : [ "protectorate1", "protectorate2" ] }
 ]
