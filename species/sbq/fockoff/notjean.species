@@ -5,7 +5,11 @@
 	"subTitle" : "O2",
 	"description" : "Square"
 	},
-	"nameGen" : [ "/species/humanmalenamegen.config:names", "/species/humanfemalenamegen.config:names" ],
+	"nameGen" : [ "/species/sbq/fockoff/notjean.species:nameGenConfig", "/species/sbq/fockoff/notjean.species:nameGenConfig" ],
+	"nameGenConfig": ["Not Jean"],
+
+	"fallbackShip" : "glitch",
+
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
 	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/notjean", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/notjean/dead.png",
@@ -131,8 +135,9 @@
 		{ "d9c189" : "eaeaea", "a38d59" : "b8b8b8", "735e3a" : "828282" }
 	],
 
-		"sbqCompatible" : true,
-	"sbqTFAny" : true,
+	"sbqCompatible" : true,
+	"sbqTFAny" : false,
+	"charCreationPatch" : false,
 	"sbqTenantData" : {
 		"colonyTagCriteria" : {
 			"human" : 8
