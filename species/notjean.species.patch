@@ -420,7 +420,7 @@
 			"remapDirectives": [
 				[
 					"flesh",
-					"primary"
+					"flesh"
 				]
 			]
 		},
@@ -432,7 +432,7 @@
 					"flesh"
 				],
 				[
-					"primary_180",
+					"flesh",
 					"flesh"
 				],
 				[
@@ -449,7 +449,7 @@
 					"flesh"
 				],
 				[
-					"primary_180",
+					"flesh",
 					"flesh"
 				],
 				[
@@ -462,7 +462,7 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
 			"remapDirectives": [
 				[
-					"primary_180"
+					"flesh"
 				],
 				[
 					"flesh",
@@ -478,7 +478,7 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
 			"remapDirectives": [
 				[
-					"primary_180"
+					"flesh"
 				],
 				[
 					"flesh",
@@ -498,7 +498,7 @@
 					"flesh"
 				],
 				[
-					"primary_180",
+					"flesh",
 					"flesh"
 				],
 				[
@@ -515,7 +515,7 @@
 					"primary"
 				],
 				[
-					"primary_180",
+					"pflesh",
 					"flesh"
 				],
 				[
@@ -528,15 +528,15 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
 			"remapDirectives": [
 				[
-					"primary_180"
-				],
-				[
-					"primary",
-					"primary"
+					"flesh"
 				],
 				[
 					"flesh",
-					"primary"
+					"flesh"
+				],
+				[
+					"flesh",
+					"flesh"
 				]
 			]
 		},
@@ -544,15 +544,15 @@
 			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
 			"remapDirectives": [
 				[
-					"primary_180"
-				],
-				[
-					"primary",
-					"primary"
+					"flesh"
 				],
 				[
 					"flesh",
-					"primary"
+					"flesh"
+				],
+				[
+					"flesh",
+					"flesh"
 				]
 			]
 		}
