@@ -138,7 +138,7 @@
 
 	"sbqCompatible" : true, // marks this species as compatible with SBQ
 	"sbqTFAny" : false,
-	"charCreationPatch" : false,
+	"charCreationPatch" : true,
 	"sbqHubNPCs" : [ // list of NPCs that can spawn in the SBQ hub world
 		{"level": 1, "species": "sbq/fockoff/carter", "type": "sbqVoreVillager", "overrides": {}}
 	],

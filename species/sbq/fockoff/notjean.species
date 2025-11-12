@@ -137,7 +137,7 @@
 
 	"sbqCompatible" : true,
 	"sbqTFAny" : false,
-	"charCreationPatch" : false,
+	"charCreationPatch" : true,
 	"sbqTenantData" : {
 		"colonyTagCriteria" : {
 			"human" : 8
