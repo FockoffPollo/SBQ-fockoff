@@ -1,0 +1,13 @@
+{
+	"version" : "0.0",
+	"tags" : "",
+	"author" : "fockoff",
+	"description" : "",
+	"link" : "",
+	"name" : "SBQ-fockoff",
+	"friendlyName" : "SBQ-fockoff",
+	"includes" : [
+		"Starbecue"
+	]
+
+}
