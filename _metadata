@@ -8,6 +8,8 @@
 	"friendlyName" : "SBQ-fockoff",
 	"includes" : [
 		"Starbecue"
-	]
-
+	],
+	"scripts" : {
+		"onLoad" : "/scripts/fockoff/onload.lua"
+	}
 }
