@@ -7,6 +7,9 @@
 	},
 	"nameGen" : [ "/species/sbq/fockoff/notjean.species:nameGenConfig", "/species/sbq/fockoff/notjean.species:nameGenConfig" ],
 	"nameGenConfig": ["Not Jean"],
+
+	"fallbackShip" : "glitch",
+
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
 	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/notjean", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/notjean/dead.png",

@@ -145,7 +145,7 @@ for _, species in ipairs(races) do
 
 	if not assets.exists("/ai/portraits/" .. species .. "questportrait.png") then
 		assets.add("/ai/portraits/" .. species .. "questportrait.png",
-			assets.image("/ai/portraits/novakidquestportrait.png"))
+			assets.image("/ai/portraits/"..fallbackShip.."questportrait.png"))
 	end
 end
 
