@@ -10,6 +10,6 @@
 		"Starbecue"
 	],
 	"scripts" : {
-		"onLoad" : "/scripts/fockoff/onload.lua"
+		"onLoad" : ["/scripts/fockoff/onload.lua"]
 	}
 }
