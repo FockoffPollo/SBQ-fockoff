@@ -1,0 +1,25 @@
+{
+	"type" : "sbq/fockoff/carter-hub",
+
+	// this should be your base NPC's type
+	"baseType" : "sbq/fockoff/carter",
+
+	"scriptConfig" : {
+		"questGenerator" : {
+			"pools" : ["sbq_common", "sbq_transform", "sbq_vore"]
+		},
+		"sbqHubNPCs" : [ // list of NPCs that can spawn in the SBQ hub world
+			{"level": 1, "species": "sbq/fockoff/carter", "type": "sbq/fockoff/carter-hub", "overrides": {}}
+		],
+		"sbqHubMicroNPCs" : [ // list of NPCs that can spawn in the SBQ hub world's micro dome
+			{"level": 1, "species": "sbq/fockoff/carter", "type": "sbq/fockoff/carter-hub", "overrides": {}}
+		]
+	},
+	"statusControllerSettings" : {
+		"stats" : {
+			"protection" : {
+				"baseValue" : 100.0
+			}
+		}
+	}
+}
