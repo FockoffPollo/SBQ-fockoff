@@ -1,5 +1,5 @@
 {
-	"type" : "cartervisitor",
+	"type" : "sbq/fockoff/cartervisitor",
 	"baseType" : "outpostvisitor",
 	"statusControllerSettings" : {
 		"statusProperties" : {
@@ -15,7 +15,7 @@
 						"What's up",
 						"Just looking."
 					],
-					"carter" : [
+					"sbq/fockoff/carter" : [
 						"Just looking, Thank you."
 					]
 				}

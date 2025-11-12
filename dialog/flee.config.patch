@@ -1,7 +1,7 @@
 [
 	{
 		"op": "add",
-		"path": "/helpme/notjean",
+		"path": "/helpme/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"Oh no",
@@ -16,7 +16,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/helpme/carter",
+		"path": "/helpme/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"Oh no",

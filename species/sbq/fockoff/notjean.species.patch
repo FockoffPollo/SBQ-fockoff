@@ -18,7 +18,7 @@
 			{"tier10":12}
 		],
 		"tenant" : {
-			"spawn": "npc", "species": "notjean", "type": "sbqVoreTenant", "overrides": {},
+			"spawn": "npc", "species": "sbq/fockoff/notjean", "type": "sbqVoreTenant", "overrides": {},
 			"orderFurniture" : [
 				{"name":"carbed", "count":1},
 				{"name":"jukebox", "count":1},
@@ -29,16 +29,16 @@
 			]
 		},
 		"guardTenant" : [ // merges on top of the base tenant
-			{"spawn": "npc", "level": 1, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 2, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 3, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 4, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 5, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 6, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 7, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 8, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 9, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 10, "species": "notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}}
+			{"spawn": "npc", "level": 1, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 2, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 3, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 4, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 5, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 6, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 7, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 8, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 9, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"spawn": "npc", "level": 10, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}}
 		]
 	},
 	// custom animation parameters for this species
@@ -313,7 +313,7 @@
 		},
 
 		"sbq/belly.png": {
-			"sourceImage": "/humanoid/any/sbqModules/belly/notjean.png",
+			"sourceImage": "/humanoid/any/sbqModules/belly/sbq/fockoff/notjean.png",
 			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
@@ -323,7 +323,7 @@
 			]
 		},
 		"sbq/belly_noNavel.png": {
-			"sourceImage": "/humanoid/any/sbqModules/belly/notjean.png",
+			"sourceImage": "/humanoid/any/sbqModules/belly/sbq/fockoff/notjean.png",
 			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
@@ -333,7 +333,7 @@
 			]
 		},
 		"sbq/infused/belly.png": {
-			"sourceImage": "/humanoid/any/sbqModules/belly/notjean.png",
+			"sourceImage": "/humanoid/any/sbqModules/belly/sbq/fockoff/notjean.png",
 			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
@@ -343,7 +343,7 @@
 			]
 		},
 		"sbq/infused/belly_noNavel.png": {
-			"sourceImage": "/humanoid/any/sbqModules/belly/notjean.png",
+			"sourceImage": "/humanoid/any/sbqModules/belly/sbq/fockoff/notjean.png",
 			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
@@ -353,7 +353,7 @@
 			]
 		},
 		"sbq/cock.png": {
-			"sourceImage": "/humanoid/any/sbqModules/cock/notjean.png",
+			"sourceImage": "/humanoid/any/sbqModules/cock/sbq/fockoff/notjean.png",
 			"remapDirectives": [
 				[
 					"flesh",
@@ -362,7 +362,7 @@
 			]
 		},
 		"sbq/infused/cock.png": {
-			"sourceImage": "/humanoid/any/sbqModules/cock/notjean.png",
+			"sourceImage": "/humanoid/any/sbqModules/cock/sbq/fockoff/notjean.png",
 			"remapDirectives": [
 				[
 					"flesh",
@@ -371,7 +371,7 @@
 			]
 		},
 		"sbq/ballsFront.png": {
-			"sourceImage": "/humanoid/any/sbqModules/balls/default/notjeanfront.png",
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/sbq/fockoff/notjeanfront.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -380,7 +380,7 @@
 			]
 		},
 		"sbq/infused/ballsFront.png": {
-			"sourceImage": "/humanoid/any/sbqModules/balls/default/notjeanfront.png",
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/sbq/fockoff/notjeanfront.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -389,7 +389,7 @@
 			]
 		},
 		"sbq/ballsBack.png": {
-			"sourceImage": "/humanoid/any/sbqModules/balls/default/notjeanback.png",
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/sbq/fockoff/notjeanback.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -398,7 +398,7 @@
 			]
 		},
 		"sbq/infused/ballsBack.png": {
-			"sourceImage": "/humanoid/any/sbqModules/balls/default/notjeanback.png",
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/sbq/fockoff/notjeanback.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -425,7 +425,7 @@
 			]
 		},
 		"sbq/breastsFront.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanfront.png",
 			"remapDirectives": [
 				[
 					"flesh",
@@ -442,7 +442,7 @@
 			]
 		},
 		"sbq/breastsBack.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanback.png",
 			"remapDirectives": [
 				[
 					"flesh",
@@ -459,7 +459,7 @@
 			]
 		},
 		"sbq/infused/breastsFront.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanfront.png",
 			"remapDirectives": [
 				[
 					"flesh"
@@ -475,7 +475,7 @@
 			]
 		},
 		"sbq/infused/breastsBack.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanback.png",
 			"remapDirectives": [
 				[
 					"flesh"
@@ -491,7 +491,7 @@
 			]
 		},
 		"sbq/breastsFront_noNipples.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanfront.png",
 			"remapDirectives": [
 				[
 					"flesh",
@@ -508,7 +508,7 @@
 			]
 		},
 		"sbq/breastsBack_noNipples.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanback.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -525,7 +525,7 @@
 			]
 		},
 		"sbq/infused/breastsFront_noNipples.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanfront.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanfront.png",
 			"remapDirectives": [
 				[
 					"flesh"
@@ -541,7 +541,7 @@
 			]
 		},
 		"sbq/infused/breastsBack_noNipples.png": {
-			"sourceImage": "/humanoid/any/sbqModules/breasts/default/notjeanback.png",
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/sbq/fockoff/notjeanback.png",
 			"remapDirectives": [
 				[
 					"flesh"

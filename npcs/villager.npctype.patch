@@ -1,6 +1,6 @@
 [
 	{ "op" : "add",
-		"path" : "/items/notjean",
+		"path" : "/items/sbq/fockoff/notjean",
 		"value" : [
 			[0, [
 				{
@@ -21,7 +21,7 @@
 		]
 	},
 	{ "op" : "add",
-		"path" : "/items/carter",
+		"path" : "/items/sbq/fockoff/carter",
 		"value" : [
 			[0, [
 				{

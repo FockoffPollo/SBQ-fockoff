@@ -1,7 +1,7 @@
 [
 	{
 		"op": "add",
-		"path": "/attack/notjean",
+		"path": "/attack/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"You're dead meat",
@@ -20,7 +20,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/killedTarget/notjean",
+		"path": "/killedTarget/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"Never mess with me",
@@ -40,7 +40,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/lostTarget/notjean",
+		"path": "/lostTarget/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"I will get you one day",
@@ -54,7 +54,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/attack/carter",
+		"path": "/attack/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"You're dead meat",
@@ -73,7 +73,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/killedTarget/carter",
+		"path": "/killedTarget/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"Never mess with me",
@@ -93,7 +93,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/lostTarget/carter",
+		"path": "/lostTarget/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"I will get you one day",

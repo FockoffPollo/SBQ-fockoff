@@ -1,14 +1,14 @@
 [
 	{
 		"op": "add",
-		"path": "/initialquests/notjean",
+		"path": "/initialquests/sbq/fockoff/notjean",
 		"value": [
 			"protectorate"
 		]
 	},
 	{
 		"op": "add",
-		"path": "/pronounGenders/notjean",
+		"path": "/pronounGenders/sbq/fockoff/notjean",
 		"value": {
 			"male": "neutral",
 			"female": "neutral"
@@ -16,14 +16,14 @@
 	},
 	{
 		"op": "add",
-		"path": "/initialquests/carter",
+		"path": "/initialquests/sbq/fockoff/carter",
 		"value": [
 			"protectorate"
 		]
 	},
 	{
 		"op": "add",
-		"path": "/pronounGenders/carter",
+		"path": "/pronounGenders/sbq/fockoff/carter",
 		"value": {
 			"male": "neutral",
 			"female": "neutral"

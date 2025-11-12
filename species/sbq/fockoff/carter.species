@@ -1,14 +1,14 @@
 {
-  "kind" : "notjean",
+  "kind" : "sbq/fockoff/carter",
 	"charCreationTooltip" : {
-	"title" : "Not Jean",
+	"title" : "sbq/fockoff/carter",
 	"subTitle" : "O2",
-	"description" : "Square"
+	"description" : "Theres not disposal content in SBQ yet."
   },
   "nameGen" : [ "/species/humanmalenamegen.config:names", "/species/humanfemalenamegen.config:names" ],
   "ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
-  "charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "notjean", "Personality" ],
-  "skull" : "/humanoid/notjean/dead.png",
+  "charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/carter", "Personality" ],
+  "skull" : "/humanoid/sbq/fockoff/carter/dead.png",
   "effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffbc47FF?replace=31a6ffFF=e87b07FF",
   "defaultBlueprints" : {
     "tier1" : [ ]
@@ -20,9 +20,9 @@
     {
        "name" : "male",
       "image" : "/interface/title/male.png",
-      "characterImage" : "/interface/title/notjeanmale.png",
+      "characterImage" : "/interface/title/sbq/fockoff/cartermale.png",
       "hair" : [ "0" ],
-      "shirt" : [ "notjeanshirt" ],
+      "shirt" : [ "cowboychest" ],
       "pants" : [ "sbq_nude_legs" ],
       "facialHairGroup" : "",
       "facialHair" : [ ],
@@ -32,9 +32,9 @@
     {
       "name" : "female",
       "image" : "/interface/title/female.png",
-      "characterImage" : "/interface/title/notjeanfemale.png",
-      "hair" : [ "0" ],
-      "shirt" : [ "notjeanshirt" ],
+      "characterImage" : "/interface/title/sbq/fockoff/carterfemale.png",
+          "hair" : [ "0" ],
+      "shirt" : [ "cowboychest" ],
       "pants" : [ "sbq_nude_legs" ],
       "facialHairGroup" : "",
       "facialHair" : [ ],

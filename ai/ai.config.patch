@@ -1,6 +1,6 @@
 [{
 		"op" : "add",
-		"path" : "/species/notjean",
+		"path" : "/species/sbq/fockoff/notjean",
 		"value" : {
 			"aiFrames" : "GlitchAI.png",
 			"portraitFrames" : "portraits/glitchportrait.png",

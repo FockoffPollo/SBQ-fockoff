@@ -1,7 +1,7 @@
 [
   {
     "op": "add",
-    "path": "/notjeanStarterTreasure",
+    "path": "/sbq/fockoff/notjeanStarterTreasure",
     "value": [[0, {
       "fill" : [
         {"pool" : "starterTreasure"}
@@ -10,7 +10,7 @@
   },
   {
     "op": "add",
-    "path": "/carterStarterTreasure",
+    "path": "/sbq/fockoff/carterStarterTreasure",
     "value": [[0, {
       "fill" : [
         {"pool" : "starterTreasure"}

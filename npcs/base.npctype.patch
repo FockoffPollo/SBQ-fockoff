@@ -1,7 +1,7 @@
 [
   {
     "op": "add",
-    "path": "/scriptConfig/chatSounds/notjean",
+    "path": "/scriptConfig/chatSounds/sbq/fockoff/notjean",
     "value": {
       "male": [
         "/sfx/humanoid/human_chatter_female1.ogg",
@@ -17,7 +17,7 @@
   },
   {
     "op": "add",
-    "path": "/scriptConfig/chatSounds/carter",
+    "path": "/scriptConfig/chatSounds/sbq/fockoff/carter",
     "value": {
       "male": [
         "/sfx/humanoid/human_chatter_female1.ogg",

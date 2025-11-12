@@ -2,16 +2,16 @@
 	"sbqCompatible" : true, // marks this species as compatible with SBQ
 	"sbqTFAny" : true, // maeks this species
 	"sbqHubNPCs" : [ // list of NPCs that can spawn in the SBQ hub world
-		{"level": 1, "species": "carter", "type": "sbqVoreVillager", "overrides": {}}
+		{"level": 1, "species": "sbq/fockoff/carter", "type": "sbqVoreVillager", "overrides": {}}
 	],
 	"sbqHubMicroNPCs" : [ // list of NPCs that can spawn in the SBQ hub world's micro dome
-		{"level": 1, "species": "carter", "type": "sbqVoreVillager", "overrides": {}}
+		{"level": 1, "species": "sbq/fockoff/carter", "type": "sbqVoreVillager", "overrides": {}}
 	],
 	"sbqTenantData" : { // data for NPC tenants
 		"colonyTagCriteria" : {// the colony tags this species wants
 		// these are the "colonyTags" that belong to objects, the number
 		// is the number of tiles occupied by objects with said tag
-			"carter" : 8
+			"sbq/fockoff/carter" : 8
 		},
 		"guardColonyTagCriteria" : [ // merges over colonyTagCriteria for the tier of guard
 		// in vanilla there is only tiers 1-4 of guard, but since many mods extend the tiers
@@ -28,16 +28,16 @@
 			{"combat":8,"tier10":12}
 		],
 		"tenant" : { // the NPC villager tenant you get when summoned by a deed
-			"spawn": "npc", "species": "carter", "type": "sbqVoreTenant", "overrides": {},
+			"spawn": "npc", "species": "sbq/fockoff/carter", "type": "sbqVoreTenant", "overrides": {},
 			"orderFurniture" : [ // list of objects you can buy within the SBQ deed
 			// you should replace these with objects that have the requisite colony tags
 			// defined up above, or with objects that are fitting for the species
-				{"name":"cartertechstation", "count":1},
-		{"name":"carterteleporter", "count":1},
-		{"name":"flagcarter", "count":1},
-		{"name":"cartershiplocker", "count":1},
-		{"name":"cartershipdoor", "count":1},
-		{"name":"carterfuelhatch", "count":1}
+				{"name":"sbq/fockoff/cartertechstation", "count":1},
+		{"name":"sbq/fockoff/carterteleporter", "count":1},
+		{"name":"flagsbq/fockoff/carter", "count":1},
+		{"name":"sbq/fockoff/cartershiplocker", "count":1},
+		{"name":"sbq/fockoff/cartershipdoor", "count":1},
+		{"name":"sbq/fockoff/carterfuelhatch", "count":1}
 			]
 		},
 		"guardTenant" : [ // merges on top of the base tenant

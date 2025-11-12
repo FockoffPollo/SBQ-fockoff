@@ -1,5 +1,5 @@
 local races = {
-	"sbq/fockoff/notjean",
+	"sbq/fockoff/sbq/fockoff/notjean",
 }
 local charcreation_patch = {}
 local universe_server_patch = {}

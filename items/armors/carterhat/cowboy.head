@@ -1,5 +1,5 @@
 {
-  "itemName" : "carterhat",
+  "itemName" : "sbq/fockoff/carterhat",
   "price" : 5000,
   "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,

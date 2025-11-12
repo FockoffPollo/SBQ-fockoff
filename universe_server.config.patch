@@ -1,6 +1,6 @@
 [
 	{ "op" : "add",
-		"path" : "/speciesShips/notjean",
+		"path" : "/speciesShips/sbq/fockoff/notjean",
 		"value" : [
 		    "/ships/glitch/glitchT0.structure",
 			"/ships/glitch/glitchT1.structure",
@@ -14,7 +14,7 @@
 		]
 	},
 	{ "op" : "add",
-		"path" : "/speciesShips/carter",
+		"path" : "/speciesShips/sbq/fockoff/carter",
 		"value" : [
 		    "/ships/glitch/glitchT0.structure",
 			"/ships/glitch/glitchT1.structure",

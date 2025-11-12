@@ -1,7 +1,7 @@
 [
 	{
 		"op": "add",
-		"path": "/beacon/notjean",
+		"path": "/beacon/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"You called?",
@@ -10,7 +10,7 @@
 				"Hi What's up?",
 				"You want something?"
 			],
-			"notjean": [
+			"sbq/fockoff/notjean": [
 				"You called?",
 				"Is there something you need?",
 				"You wanna talk?",
@@ -21,7 +21,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/rent/notjean",
+		"path": "/rent/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"I thought you might like this",
@@ -35,7 +35,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/beacon/carter",
+		"path": "/beacon/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"You called?",
@@ -44,7 +44,7 @@
 				"Hi What's up?",
 				"You want something?"
 			],
-			"carter": [
+			"sbq/fockoff/carter": [
 				"You called?",
 				"Is there something you need?",
 				"You wanna talk?",
@@ -55,7 +55,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/rent/carter",
+		"path": "/rent/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"I thought you might like this",

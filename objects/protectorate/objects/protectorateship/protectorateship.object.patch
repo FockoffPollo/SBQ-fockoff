@@ -1,12 +1,12 @@
 [
   {
     "op": "add",
-    "path": "/notjeanDescription",
+    "path": "/sbq/fockoff/notjeanDescription",
     "value": "Just as I hoped This ship is my way out of here."
   },
   {
     "op": "add",
-    "path": "/carterDescription",
+    "path": "/sbq/fockoff/carterDescription",
     "value": "Just as I hoped This ship is my way out of here."
   }
 ]

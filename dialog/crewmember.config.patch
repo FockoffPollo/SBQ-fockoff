@@ -1,7 +1,7 @@
 [
 	{
 		"op": "add",
-		"path": "/converse/notjean",
+		"path": "/converse/sbq/fockoff/notjean",
 		"value": {
 			"default": [
 				"Adventure ahoy",
@@ -14,7 +14,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/converse/carter",
+		"path": "/converse/sbq/fockoff/carter",
 		"value": {
 			"default": [
 				"Adventure ahoy",
