@@ -13,5 +13,20 @@
 			"male": "neutral",
 			"female": "neutral"
 		}
+	},
+	{
+		"op": "add",
+		"path": "/initialquests/carter",
+		"value": [
+			"protectorate"
+		]
+	},
+	{
+		"op": "add",
+		"path": "/pronounGenders/carter",
+		"value": {
+			"male": "neutral",
+			"female": "neutral"
+		}
 	}
 ]

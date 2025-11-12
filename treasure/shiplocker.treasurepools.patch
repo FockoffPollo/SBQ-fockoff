@@ -7,5 +7,14 @@
         {"pool" : "starterTreasure"}
       ]
     }]]
+  },
+  {
+    "op": "add",
+    "path": "/carterStarterTreasure",
+    "value": [[0, {
+      "fill" : [
+        {"pool" : "starterTreasure"}
+      ]
+    }]]
   }
 ]

@@ -3,5 +3,10 @@
     "op": "add",
     "path": "/notjeanDescription",
     "value": "Just as I hoped This ship is my way out of here."
+  },
+  {
+    "op": "add",
+    "path": "/carterDescription",
+    "value": "Just as I hoped This ship is my way out of here."
   }
 ]
