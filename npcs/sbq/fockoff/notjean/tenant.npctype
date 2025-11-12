@@ -64,14 +64,14 @@
 			"priority" : 60,
 			"colonyTagCriteria" : {
 				// You should make the colony tags below reflect what your OC likes
-				"office" : 4
+				"opulent" : 4
 			},
 			"tenant" : {
 				"spawn": "npc", "species": "sbq/fockoff/notjean", "type": "sbq/fockoff/notjean", "overrides": {},
 				"orderFurniture" : [
 					// you should populate this list with objects that have the requisite colonytags
-					{"name":"officedesk", "count":1},
-					{"name":"officelamp", "count":1}
+					{"name":"opulentlight", "count":1},
+					{"name":"opulentbed", "count":1}
 				]
 			}
 		},
@@ -389,5 +389,20 @@
 		"statusProperties" : {
 			"sbqDidVornyConvertCheck" : true
 		}
+	},
+	"items" : {
+		"override" : [
+			[0,
+				[
+					{
+						"chestCosmetic" : [{
+							"parameters" : { "directives" : "?replace;ffca8a=311e70;e0975c=291763;a85636=1f0f52;6f2919=15093f?replace;291410=d49d38;3d2823=437d14", "colorIndex" : 9},
+							"name" : "sbq/fockoff/notjeanshirt",
+							"count" : 1
+						}]
+					}
+				]
+			]
+		]
 	}
 }

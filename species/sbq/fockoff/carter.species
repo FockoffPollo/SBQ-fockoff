@@ -145,52 +145,6 @@
 	"sbqHubMicroNPCs" : [ // list of NPCs that can spawn in the SBQ hub world's micro dome
 		{"level": 1, "species": "sbq/fockoff/carter", "type": "sbqVoreVillager", "overrides": {}}
 	],
-	"sbqTenantData" : { // data for NPC tenants
-		"colonyTagCriteria" : {// the colony tags this species wants
-		// these are the "colonyTags" that belong to objects, the number
-		// is the number of tiles occupied by objects with said tag
-			"sbq/fockoff/carter" : 8
-		},
-		"guardColonyTagCriteria" : [ // merges over colonyTagCriteria for the tier of guard
-		// in vanilla there is only tiers 1-4 of guard, but since many mods extend the tiers
-		// it is good to define them anyway even if they might not be obtainable
-			{"combat":8},
-			{"combat":8,"tier2":12},
-			{"combat":8,"tier3":12},
-			{"combat":8,"tier4":12},
-			{"combat":8,"tier5":12},
-			{"combat":8,"tier6":12},
-			{"combat":8,"tier7":12},
-			{"combat":8,"tier8":12},
-			{"combat":8,"tier9":12},
-			{"combat":8,"tier10":12}
-		],
-		"tenant" : { // the NPC villager tenant you get when summoned by a deed
-			"spawn": "npc", "species": "sbq/fockoff/carter", "type": "sbqVoreTenant", "overrides": {},
-			"orderFurniture" : [ // list of objects you can buy within the SBQ deed
-			// you should replace these with objects that have the requisite colony tags
-			// defined up above, or with objects that are fitting for the species
-				{"name":"sbq/fockoff/cartertechstation", "count":1},
-		{"name":"sbq/fockoff/carterteleporter", "count":1},
-		{"name":"flagsbq/fockoff/carter", "count":1},
-		{"name":"sbq/fockoff/cartershiplocker", "count":1},
-		{"name":"sbq/fockoff/cartershipdoor", "count":1},
-		{"name":"sbq/fockoff/carterfuelhatch", "count":1}
-			]
-		},
-		"guardTenant" : [ // merges on top of the base tenant
-			{"level": 1, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 2, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 3, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 4, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 5, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 6, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 7, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 8, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 9, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"level": 10, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}}
-		]
-	},
 	// the settings config for the species, here you can define default values for
 	// settings, as well as if any values should be overrided or are invalid
 	"sbqSettingsConfig": {
