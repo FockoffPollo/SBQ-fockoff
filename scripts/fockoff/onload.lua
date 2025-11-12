@@ -1,10 +1,6 @@
 local races = {
-<<<<<<< HEAD
-	"sbq/fockoff/sbq/fockoff/notjean",
-=======
 	"sbq/fockoff/notjean",
 	"sbq/fockoff/carter"
->>>>>>> d4442e98b8e3b2ae512b86dd0c71be30a2958b17
 }
 local charcreation_patch = {}
 local universe_server_patch = {}
