@@ -1,5 +1,5 @@
 {
-  "itemName" : "notjeanshirt",
+  "itemName" : "sbq/fockoff/notjeanshirt",
   "price" : 75,
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
