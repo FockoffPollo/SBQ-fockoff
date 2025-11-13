@@ -3,16 +3,16 @@
 	"charCreationTooltip" : {
 	"title" : "Carter",
 	"subTitle" : "O2",
-	"description" : "Theres not disposal content in SBQ yet."
+	"description" : "Made with the sole purpose of making bullshit jokes. Taur body not included."
 	},
 	"forceName": "Carter",
 	"nameGen" : [ "/species/sbq/fockoff/carter.species:nameGenConfig", "/species/sbq/fockoff/carter.species:nameGenConfig" ],
 	"nameGenConfig": ["Carter"],
 
-	"fallbackShip" : "glitch",
+	"fallbackShip" : "novakid",
 
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
-	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/carter", "Personality" ],
+	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Carter", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/carter/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffbc47FF?replace=31a6ffFF=e87b07FF",
 	"defaultBlueprints" : {
@@ -27,7 +27,7 @@
 			"image" : "/interface/title/male.png",
 			"characterImage" : "/humanoid/sbq/fockoff/carter/icon.png",
 			"hair" : [ "0" ],
-			"shirt" : [ "cowboychest" ],
+			"shirt" : [ "sbq/fockoff/carterchest" ],
 			"pants" : [ "sbq_nude_legs" ],
 			"facialHairGroup" : "",
 			"facialHair" : [ ],
@@ -39,7 +39,7 @@
 			"image" : "/interface/title/female.png",
 			"characterImage" : "/humanoid/sbq/fockoff/carter/icon.png",
 					"hair" : [ "0" ],
-			"shirt" : [ "cowboychest" ],
+			"shirt" : [ "sbq/fockoff/carterchest" ],
 			"pants" : [ "sbq_nude_legs" ],
 			"facialHairGroup" : "",
 			"facialHair" : [ ],

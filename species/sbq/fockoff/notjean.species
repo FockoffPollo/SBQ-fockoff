@@ -3,7 +3,7 @@
 	"charCreationTooltip" : {
 	"title" : "Not Jean",
 	"subTitle" : "O2",
-	"description" : "Square"
+	"description" : "The ender dragon is a giant flying hostile boss mob found when first entering the End. It is the largest naturally spawning mob in the game. Defeating it activates the exit portal that allows return to the Overworld and spawns End gateways that provide entry to the outer End islands. Its attacks involve charging at the player and shooting fireballs that create damaging effect clouds. They also have a square Ass. :)"
 	},
 	"nameGen" : [ "/species/sbq/fockoff/notjean.species:nameGenConfig", "/species/sbq/fockoff/notjean.species:nameGenConfig" ],
 	"nameGenConfig": ["Not Jean"],
@@ -11,7 +11,7 @@
 	"fallbackShip" : "glitch",
 
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
-	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/notjean", "Personality" ],
+	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Not Jean", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/notjean/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffbc47FF?replace=31a6ffFF=e87b07FF",
 	"defaultBlueprints" : {
