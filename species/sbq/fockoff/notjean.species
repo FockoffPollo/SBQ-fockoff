@@ -3,7 +3,7 @@
 	"charCreationTooltip" : {
 	"title" : "Not Jean",
 	"subTitle" : "O2",
-	"description" : "Square"
+	"description" : "The ender dragon is a giant flying hostile boss mob found when first entering the End. It is the largest naturally spawning mob in the game. Defeating it activates the exit portal that allows return to the Overworld and spawns End gateways that provide entry to the outer End islands. Its attacks involve charging at the player and shooting fireballs that create damaging effect clouds. They also have a square Ass. :)"
 	},
 	"nameGen" : [ "/species/sbq/fockoff/notjean.species:nameGenConfig", "/species/sbq/fockoff/notjean.species:nameGenConfig" ],
 	"nameGenConfig": ["Not Jean"],
@@ -11,7 +11,7 @@
 	"fallbackShip" : "glitch",
 
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
-	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "sbq/fockoff/notjean", "Personality" ],
+	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Not Jean", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/notjean/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffbc47FF?replace=31a6ffFF=e87b07FF",
 	"defaultBlueprints" : {
@@ -138,46 +138,6 @@
 	"sbqCompatible" : true,
 	"sbqTFAny" : false,
 	"charCreationPatch" : true,
-	"sbqTenantData" : {
-		"colonyTagCriteria" : {
-			"human" : 8
-		},
-		"guardColonyTagCriteria" : [ // merges over colonyTagCriteria for the tier
-			{},
-			{"tier2":12},
-			{"tier3":12},
-			{"tier4":12},
-			{"tier5":12},
-			{"tier6":12},
-			{"tier7":12},
-			{"tier8":12},
-			{"tier9":12},
-			{"tier10":12}
-		],
-		"tenant" : {
-			"spawn": "npc", "species": "sbq/fockoff/notjean", "type": "sbqVoreTenant", "overrides": {},
-			"orderFurniture" : [
-				{"name":"carbed", "count":1},
-				{"name":"jukebox", "count":1},
-				{"name":"basictv", "count":1},
-				{"name":"fridge", "count":1},
-				{"name":"oven1", "count":1},
-				{"name":"basicbath", "count":1}
-			]
-		},
-		"guardTenant" : [ // merges on top of the base tenant
-			{"spawn": "npc", "level": 1, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 2, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 3, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 4, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 5, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 6, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 7, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 8, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 9, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
-			{"spawn": "npc", "level": 10, "species": "sbq/fockoff/notjean", "type": "sbqVoreFriendlyGuardTenant", "overrides": {}}
-		]
-	},
 	// custom animation parameters for this species
 	"baseColorPalette": {
 		"primary": [
