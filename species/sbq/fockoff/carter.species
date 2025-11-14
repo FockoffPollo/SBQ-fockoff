@@ -15,9 +15,82 @@
 	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Carter", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/carter/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffbc47FF?replace=31a6ffFF=e87b07FF",
-	"defaultBlueprints" : {
-		"tier1" : [ ]
-	},
+  "defaultBlueprints" : {
+    "tier1" : [
+
+// Empty Hands
+      { "item" : "flagnovakid" },
+      { "item" : "sbq/fockoff/carterhat" },
+// Anvil
+      { "item" : "novatier1head" },
+      { "item" : "novatier1chest" },
+      { "item" : "novatier1pants" },
+      { "item" : "novatier2head" },
+      { "item" : "novatier2chest" },
+      { "item" : "novatier2pants" },
+      { "item" : "ironrevolver" },
+      { "item" : "ironassaultrifle" },
+      { "item" : "tungstenmagnum" },
+      { "item" : "tungstenshotgun" },
+
+
+// Anvil2
+      { "item" : "novatier3head" },
+      { "item" : "novatier3chest" },
+      { "item" : "novatier3pants" },
+      { "item" : "novatier4head" },
+      { "item" : "novatier4chest" },
+      { "item" : "novatier4pants" },
+      { "item" : "titaniummachinepistol" },
+      { "item" : "titaniumsniperrifle" },
+      { "item" : "durasteelrevolver" },
+      { "item" : "durasteelassaultrifle" },
+
+// Anvil3
+      { "item" : "novatier5ahead" },
+      { "item" : "novatier5achest" },
+      { "item" : "novatier5apants" },
+      { "item" : "novatier6ahead" },
+      { "item" : "novatier6achest" },
+      { "item" : "novatier6apants" },
+
+      { "item" : "novatier5mhead" },
+      { "item" : "novatier5mchest" },
+      { "item" : "novatier5mpants" },
+      { "item" : "novatier6mhead" },
+      { "item" : "novatier6mchest" },
+      { "item" : "novatier6mpants" },
+
+      { "item" : "novatier5shead" },
+      { "item" : "novatier5schest" },
+      { "item" : "novatier5spants" },
+      { "item" : "novatier6shead" },
+      { "item" : "novatier6schest" },
+      { "item" : "novatier6spants" },
+
+      { "item" : "aegisaltpistol" },
+      { "item" : "aegisaltbow" },
+      { "item" : "feroziumwand" },
+      { "item" : "feroziumstaff" },
+      { "item" : "violiumshortsword" },
+      { "item" : "violiumbroadsword" },
+
+// Furniture Table 2
+      { "item" : "novakidstoragelocker" },
+      { "item" : "novakidshipdoor" },
+      { "item" : "novakidshiphatch" },
+
+// Spinning Wheel
+      { "item" : "novakidfancychest" },
+      { "item" : "novakidfancypants" },
+      { "item" : "novakidjacket" },
+      { "item" : "novakidjacketpants" },
+      { "item" : "novakidsuspenders" },
+      { "item" : "novakidsuspenderspants" },
+      { "item" : "novakidwaistcoat" },
+      { "item" : "novakidblackpants" }
+    ]
+  },
 	"altOptionAsUndyColor" : true,
 	"headOptionAsHairColor" : true,
 	"altOptionAsHairColor" : true,

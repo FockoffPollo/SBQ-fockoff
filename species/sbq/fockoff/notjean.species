@@ -14,9 +14,83 @@
 	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Not Jean", "Personality" ],
 	"skull" : "/humanoid/sbq/fockoff/notjean/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffbc47FF?replace=31a6ffFF=e87b07FF",
-	"defaultBlueprints" : {
-		"tier1" : [ ]
-	},
+  "defaultBlueprints" : {
+    "tier1" : [
+
+// Empty Hands
+      { "item" : "flagglitch" },
+
+// Anvil
+      { "item" : "glitchtier1head" },
+      { "item" : "glitchtier1chest" },
+      { "item" : "glitchtier1pants" },
+      { "item" : "glitchtier2head" },
+      { "item" : "glitchtier2chest" },
+      { "item" : "glitchtier2pants" },
+
+      { "item" : "ironshortsword" },
+      { "item" : "ironbroadsword" },
+      { "item" : "tungstenaxe" },
+      { "item" : "tungstenhammer" },
+
+// Anvil2
+      { "item" : "glitchtier3head" },
+      { "item" : "glitchtier3chest" },
+      { "item" : "glitchtier3pants" },
+      { "item" : "glitchtier4head" },
+      { "item" : "glitchtier4chest" },
+      { "item" : "glitchtier4pants" },
+
+      { "item" : "titaniumdagger" },
+      { "item" : "titaniumspear" },
+      { "item" : "durasteelbroadsword" },
+      { "item" : "durasteelshortsword" },
+
+// Anvil3
+      { "item" : "glitchtier5ahead" },
+      { "item" : "glitchtier5achest" },
+      { "item" : "glitchtier5apants" },
+      { "item" : "glitchtier6ahead" },
+      { "item" : "glitchtier6achest" },
+      { "item" : "glitchtier6apants" },
+
+      { "item" : "glitchtier5mhead" },
+      { "item" : "glitchtier5mchest" },
+      { "item" : "glitchtier5mpants" },
+      { "item" : "glitchtier6mhead" },
+      { "item" : "glitchtier6mchest" },
+      { "item" : "glitchtier6mpants" },
+
+      { "item" : "glitchtier5shead" },
+      { "item" : "glitchtier5schest" },
+      { "item" : "glitchtier5spants" },
+      { "item" : "glitchtier6shead" },
+      { "item" : "glitchtier6schest" },
+      { "item" : "glitchtier6spants" },
+
+      { "item" : "aegisaltpistol" },
+      { "item" : "aegisaltbow" },
+      { "item" : "feroziumwand" },
+      { "item" : "feroziumstaff" },
+      { "item" : "violiumshortsword" },
+      { "item" : "violiumbroadsword" },
+
+// Furniture Table 2
+      { "item" : "glitchstoragelocker" },
+      { "item" : "glitchshipdoor" },
+      { "item" : "glitchshiphatch" },
+
+// Spinning Wheel
+      { "item" : "craftsmenchest" },
+      { "item" : "craftsmenlegs" },
+      { "item" : "merchantchest" },
+      { "item" : "merchantlegs" },
+      { "item" : "noblechest" },
+      { "item" : "noblelegs" },
+      { "item" : "peasantchest" },
+      { "item" : "peasantlegs" }
+    ]
+  },
 	"altOptionAsUndyColor" : true,
 	"headOptionAsHairColor" : true,
 	"altOptionAsHairColor" : true,
