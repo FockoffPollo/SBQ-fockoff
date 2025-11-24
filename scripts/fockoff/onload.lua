@@ -1,7 +1,5 @@
 local races = {
 	"sbq/fockoff/notjean",
-	"sbq/fockoff/goat",
-	"sbq/fockoff/rudolph",
 	"sbq/fockoff/carter"
 }
 local charcreation_patch = {}
