@@ -599,7 +599,7 @@
 			]
 		},
 		"sbq/ballsFront.png": {
-			"sourceImage": "/humanoid/sbq/IcyVixen/Fray/sbq/balls/front.png",
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/hyperfront.png",
 			"remapDirectives": [
 				[
 					"primary",
@@ -617,7 +617,7 @@
 			]
 		},
 		"sbq/ballsBack.png": {
-			"sourceImage": "/humanoid/sbq/IcyVixen/Fray/sbq/balls/front.png",
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/hyperback.png",
 			"remapDirectives": [
 				[
 					"primary",
